@@ -1,0 +1,25 @@
+- alias: Bedroom Switch - On
+  mode: single
+  trigger:
+    - platform: device
+      domain: mqtt
+      device_id: 29d3d5e3e454095c6fd24afddb6e6920
+      type: action
+      subtype: release_4
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.bedroom_bright
+
+- alias: Bedroom Switch - Off
+  mode: single
+  trigger:
+    - platform: device
+      domain: mqtt
+      device_id: 29d3d5e3e454095c6fd24afddb6e6920
+      type: action
+      subtype: release_3
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.bedroom_off

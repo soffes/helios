@@ -20,3 +20,5 @@ __pycache__
 .HA_VERSION
 /image
 /custom_components
+
+zigbee2mqtt

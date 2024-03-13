@@ -1,0 +1,16 @@
+substitutions:
+  name: standing-desk
+  friendly_name: Standing Desk
+packages:
+  tj_horner.upsy_desky: github://tjhorner/upsy-desky/firmware/stock.yaml@v2.0.0
+esphome:
+  name: ${name}
+  name_add_mac_suffix: false
+  friendly_name: ${friendly_name}
+api:
+  encryption:
+    key: !secret standing_desk_encryption_key
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password

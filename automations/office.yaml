@@ -1,0 +1,11 @@
+- alias: Office Switch - Off
+  trigger:
+    - platform: device
+      domain: mqtt
+      device_id: 724e6aefc7e1dbad35a94a1673b4b680
+      type: action
+      subtype: release_3
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.office_off

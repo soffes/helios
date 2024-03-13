@@ -1,0 +1,9 @@
+- name: Sonos
+  platform: group
+  entities:
+    - media_player.bedroom
+    - media_player.bookshelf
+    - media_player.living_room
+    - media_player.bathroom
+    - media_player.office
+    - media_player.kitchen

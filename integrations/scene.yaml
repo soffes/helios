@@ -1,0 +1,44 @@
+- name: Bedroom - Bright
+  entities:
+    light.bedroom_lamp_north:
+      # TODO: Set brightness and color
+      state: "on"
+    light.bedroom_lamp_south:
+      # TODO: Set brightness and color
+      state: "on"
+    light.bed_lightstrip_north:
+      state: "off"
+    light.bed_lightstrip_south:
+      state: "off"
+
+- name: Bedroom - Off
+  entities:
+    light.bedroom_lamp_north:
+      state: "off"
+    light.bedroom_lamp_south:
+      state: "off"
+    light.bed_lightstrip_north:
+      state: "off"
+    light.bed_lightstrip_south:
+      state: "off"
+
+- name: Living Room - Bright
+  entities:
+    light.living_room_table_lamp:
+      # TODO: Set brightness and color
+      state: "on"
+    light.living_room_arc_lamp:
+      # TODO: Set brightness and color
+      state: "on"
+
+- name: Living Room - Off
+  entities:
+    light.living_room_table_lamp:
+      state: "off"
+    light.living_room_arc_lamp:
+      state: "off"
+
+- name: Office - Off
+  entities:
+    switch.space_heater:
+      state: "off"
