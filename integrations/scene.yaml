@@ -1,11 +1,13 @@
 - name: Bedroom - Bright
   entities:
     light.bedroom_lamp_north:
-      # TODO: Set brightness and color
       state: "on"
+      brightness: 255
+      color_temp: 350
     light.bedroom_lamp_south:
-      # TODO: Set brightness and color
       state: "on"
+      brightness: 255
+      color_temp: 350
     light.bed_lightstrip_north:
       state: "off"
     light.bed_lightstrip_south:
@@ -25,11 +27,13 @@
 - name: Living Room - Bright
   entities:
     light.living_room_table_lamp:
-      # TODO: Set brightness and color
       state: "on"
+      brightness: 255
+      color_temp: 350
     light.living_room_arc_lamp:
-      # TODO: Set brightness and color
       state: "on"
+      brightness: 255
+      color_temp: 350
 
 - name: Living Room - Off
   entities:
