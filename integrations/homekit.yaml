@@ -5,22 +5,38 @@
       - cover
       - fan
       - light
-      - lock
     include_entities:
-      - binary_sensor.doorbell
-      - camera.doorbell
-      - camera.doormat
       - media_player.sonos
       - switch.space_heater
       - switch.turntable
     exclude_entities:
       - light.standing_desk_status
   entity_config:
-    camera.doorbell:
-      support_audio: True
-      linked_doorbell_sensor: binary_sensor.doorbell
-    camera.doormat:
-      support_audio: True
     media_player.sonos:
       feature_list:
         - feature: play_pause
+
+- name: Doorbell Bridge
+  port: 21064
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.doorbell
+  entity_config:
+    camera.doorbell:
+      support_audio: True
+      linked_doorbell_sensor: binary_sensor.doorbell
+
+- name: Doormat Bridge
+  port: 21065
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.doormat
+
+- name: Door Lock Bridge
+  port: 21066
+  mode: accessory
+  filter:
+    include_entities:
+      - lock.front_door

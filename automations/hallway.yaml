@@ -1,23 +1,23 @@
-- alias: Office Switch - On
+- alias: Hallway Switch - On
   trigger:
     - platform: device
       domain: mqtt
-      device_id: 724e6aefc7e1dbad35a94a1673b4b680
+      device_id: 98fec1c980f2569aa93888fd10fff0c2
       type: action
       subtype: release_4
   action:
     - service: scene.turn_on
       target:
-        entity_id: scene.office_bright
+        entity_id: scene.hallway_bright
 
-- alias: Office Switch - Off
+- alias: Hallway Switch - Off
   trigger:
     - platform: device
       domain: mqtt
-      device_id: 724e6aefc7e1dbad35a94a1673b4b680
+      device_id: 98fec1c980f2569aa93888fd10fff0c2
       type: action
       subtype: release_3
   action:
     - service: scene.turn_on
       target:
-        entity_id: scene.office_off
+        entity_id: scene.hallway_off

@@ -42,7 +42,27 @@
     light.living_room_arc_lamp:
       state: "off"
 
+- name: Office - Bright
+  entities:
+    light.office_floor_lamp:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+
 - name: Office - Off
   entities:
+    light.office_floor_lamp:
+      state: "off"
     switch.space_heater:
+      state: "off"
+
+- name: Hallway - Bright
+  entities:
+    light.hallway_overhead:
+      state: "on"
+      brightness: 255
+
+- name: Hallway - Off
+  entities:
+    light.hallway_overhead:
       state: "off"
