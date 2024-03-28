@@ -11,6 +11,7 @@
       - switch.turntable
     exclude_entities:
       - light.standing_desk_status
+      - light.garage_door_opener
   entity_config:
     media_player.sonos:
       feature_list:
