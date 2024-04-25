@@ -1,0 +1,23 @@
+- alias: Entryway Switch - On
+  trigger:
+    - platform: device
+      domain: mqtt
+      device_id: 0609084d6bc6ad8b61426e4091842fd3
+      type: action
+      subtype: release_4
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.hallway_bright
+
+- alias: Entryway Switch - Off
+  trigger:
+    - platform: device
+      domain: mqtt
+      device_id: 0609084d6bc6ad8b61426e4091842fd3
+      type: action
+      subtype: release_3
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.hallway_off

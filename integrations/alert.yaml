@@ -1,0 +1,15 @@
+garage_door:
+  name: Garage Door
+  entity_id: cover.garage_door
+  state: open
+  title: Garage Door
+  message: The garage door has been open for {{ states['cover.garage_door'].last_changed | relative_time }}
+  done_message: ✅ Garage is closed
+  skip_first: true
+  repeat:
+    - 10
+    - 30
+    - 45
+    - 60
+  notifiers:
+    - mobile_app_sams_iphone
