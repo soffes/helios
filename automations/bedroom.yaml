@@ -23,3 +23,27 @@
     - service: scene.turn_on
       target:
         entity_id: scene.bedroom_off
+
+- alias: Bedroom Closet - Open
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.bedroom_closet_door
+      from: "off"
+      to: "on"
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.bedroom_closet_on
+
+- alias: Bedroom Closet - Closed
+  mode: single
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.bedroom_closet_door
+      from: "on"
+      to: "off"
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.bedroom_closet_off

@@ -1,0 +1,23 @@
+- alias: Studio Switch - On
+  trigger:
+    - platform: device
+      domain: mqtt
+      device_id: 82876038b9c407dbf584029516470cb7
+      type: action
+      subtype: release_4
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.studio_bright
+
+- alias: Studio Switch - Off
+  trigger:
+    - platform: device
+      domain: mqtt
+      device_id: 82876038b9c407dbf584029516470cb7
+      type: action
+      subtype: release_3
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.studio_off

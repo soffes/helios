@@ -41,3 +41,10 @@
   filter:
     include_entities:
       - lock.front_door
+
+- name: Garage Bridge
+  port: 21067
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.garage
