@@ -1,10 +1,26 @@
 garage_door:
-  name: Garage Door
+  name: Garage Door Alert
   entity_id: cover.garage_door
   state: open
   title: Garage Door
   message: The garage door has been open for {{ states['cover.garage_door'].last_changed | relative_time }}
   done_message: ✅ Garage is closed
+  skip_first: true
+  repeat:
+    - 10
+    - 30
+    - 45
+    - 60
+  notifiers:
+    - mobile_app_sams_iphone
+
+front_door:
+  name: Front Door Alert
+  entity_id: lock.front_door
+  state: unlocked
+  title: Front Door
+  message: The front door has been open for {{ states['lock.front_door'].last_changed | relative_time }}
+  done_message: 🔒 Front is locked
   skip_first: true
   repeat:
     - 10

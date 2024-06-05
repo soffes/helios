@@ -73,6 +73,7 @@
     light.entryway_sconce:
       state: "on"
       brightness: 255
+      color_temp: 350
     light.hallway_overhead:
       state: "on"
       brightness: 255
