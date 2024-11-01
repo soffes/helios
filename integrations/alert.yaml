@@ -2,7 +2,7 @@ garage_door:
   name: Garage Door Alert
   entity_id: cover.garage_door
   state: open
-  title: Garage Door
+  title: 🏠 Garage Door
   message: The garage door has been open for {{ states['cover.garage_door'].last_changed | relative_time }}
   done_message: ✅ Garage is closed
   skip_first: true
@@ -18,9 +18,9 @@ front_door:
   name: Front Door Alert
   entity_id: lock.front_door
   state: unlocked
-  title: Front Door
+  title: 🏠 Front Door
   message: The front door has been open for {{ states['lock.front_door'].last_changed | relative_time }}
-  done_message: 🔒 Front is locked
+  done_message: ✅ Front door is locked
   skip_first: true
   repeat:
     - 10

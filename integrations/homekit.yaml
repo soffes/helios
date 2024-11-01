@@ -3,19 +3,32 @@
     include_domains:
       - climate
       - cover
-      - fan
       - light
     include_entities:
-      - media_player.sonos
+      - fan.bedroom
+      - fan.living_room
+      - light.vanity_switch
       - switch.space_heater
       - switch.turntable
     exclude_entities:
-      - light.standing_desk_status
-      - light.garage_door_opener
-  entity_config:
-    media_player.sonos:
-      feature_list:
-        - feature: play_pause
+      - fan.airmega
+      - light.bathroom_switch
+      - light.bathroom_switch_led
+      - light.bedroom_closet_switch
+      - light.bedroom_closet_switch_led
+      - light.bedroom_switch
+      - light.bedroom_switch_led
+      - light.countertop_switch
+      - light.countertop_switch_led
+      - light.kitchen_switch
+      - light.kitchen_switch_led
+      - light.living_room_switch
+      - light.living_room_switch_led
+      - light.office_closet_switch
+      - light.office_closet_switch_led
+      - light.office_switch
+      - light.office_switch_led
+      - light.vanity_switch_led
 
 - name: Doorbell Bridge
   port: 21064
@@ -48,3 +61,24 @@
   filter:
     include_entities:
       - camera.garage
+
+- name: Driveway Bridge
+  port: 21068
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.driveway
+
+- name: Backyard Bridge
+  port: 21069
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.backyard
+
+- name: Studio Bridge
+  port: 21070
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.studio

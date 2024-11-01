@@ -2,7 +2,7 @@
   trigger:
     - platform: device
       domain: mqtt
-      device_id: 82876038b9c407dbf584029516470cb7
+      device_id: 724b60fe72d65fca7ce2a653e42afbfa
       type: action
       subtype: release_4
   action:
@@ -14,7 +14,7 @@
   trigger:
     - platform: device
       domain: mqtt
-      device_id: 82876038b9c407dbf584029516470cb7
+      device_id: 724b60fe72d65fca7ce2a653e42afbfa
       type: action
       subtype: release_3
   action:

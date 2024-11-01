@@ -1,0 +1,3 @@
+- platform: switch
+  name: Airmega
+  entity_id: switch.airmega_light
