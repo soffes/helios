@@ -80,6 +80,22 @@
 
 - name: Office - Bright
   entities:
+    light.office_nw:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.office_ne:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.office_se:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.office_sw:
+      state: "on"
+      brightness: 255
+      color_temp: 350
     light.office_floor_lamp:
       state: "on"
       brightness: 255
@@ -89,7 +105,29 @@
   entities:
     light.office_floor_lamp:
       state: "off"
+    light.office_nw:
+      state: "off"
+    light.office_ne:
+      state: "off"
+    light.office_se:
+      state: "off"
+    light.office_sw:
+      state: "off"
+    light.office_closet:
+      state: "off"
     switch.space_heater:
+      state: "off"
+
+- name: Office Closet - Bright
+  entities:
+    light.office_closet:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+
+- name: Office Closet - Off
+  entities:
+    light.office_closet:
       state: "off"
 
 - name: Hallway - Bright

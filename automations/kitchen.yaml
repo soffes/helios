@@ -1,0 +1,25 @@
+- alias: Kitchen Countertop - On
+  mode: single
+  trigger:
+    - trigger: device
+      device_id: 1f7038808c014ef40dbf48463037e167
+      domain: button
+      entity_id: event.countertop_switch_up
+      type: pressed
+  action:
+    - action: light.turn_on
+      target:
+        entity_id: light.countertop_lightstrip
+
+- alias: Kitchen Countertop - Off
+  mode: single
+  trigger:
+    - trigger: device
+      device_id: 1f7038808c014ef40dbf48463037e167
+      domain: button
+      entity_id: event.countertop_switch_down
+      type: pressed
+  action:
+    - action: light.turn_off
+      target:
+        entity_id: light.countertop_lightstrip
