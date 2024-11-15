@@ -47,6 +47,8 @@
       state: "off"
     light.bed_lightstrip_south:
       state: "off"
+    light.bedroom_closet:
+      state: "off"
 
 - name: Bedroom Closet - On
   entities:
@@ -203,3 +205,10 @@
       state: "off"
     light.vanity_switch_led:
       state: "off"
+
+- name: Front Porch Motion
+  entities:
+    light.front_porch:
+      state: "on"
+      brightness: 128
+      color_temp: 350

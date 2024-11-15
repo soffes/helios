@@ -1,23 +1,65 @@
-- alias: Entryway Switch - On
-  trigger:
-    - platform: device
-      domain: mqtt
-      device_id: 0609084d6bc6ad8b61426e4091842fd3
-      type: action
-      subtype: release_4
-  action:
-    - service: scene.turn_on
-      target:
-        entity_id: scene.hallway_bright
+# Doorbell
 
-- alias: Entryway Switch - Off
-  trigger:
-    - platform: device
-      domain: mqtt
-      device_id: 0609084d6bc6ad8b61426e4091842fd3
-      type: action
-      subtype: release_3
-  action:
-    - service: scene.turn_on
+- alias: Doorbell - Motion
+  mode: single
+  triggers:
+    - trigger: state
+      entity_id:
+        - binary_sensor.doorbell_motion
+      from: "off"
+  conditions:
+    - condition: sun
+      after: sunset
+  actions:
+    - action: scene.turn_on
       target:
-        entity_id: scene.hallway_off
+        entity_id: scene.front_porch_motion
+
+- alias: Doorbell - Clear
+  mode: single
+  triggers:
+    - trigger: state
+      entity_id:
+        - binary_sensor.doorbell_motion
+      to: "off"
+      from: "on"
+  actions:
+    - delay:
+        minutes: 2
+    - action: light.turn_off
+      target:
+        entity_id: light.front_porch
+
+# Front Door
+
+- alias: Front Door - Unlocked
+  mode: single
+  triggers:
+    - trigger: state
+      entity_id:
+        - lock.front_door
+      to: unlocked
+  conditions:
+    - condition: sun
+      after: sunset
+  actions:
+    - action: scene.turn_on
+      target:
+        entity_id: scene.front_porch_motion
+
+- alias: Front Door - Locked
+  mode: single
+  triggers:
+    - trigger: state
+      entity_id:
+        - lock.front_door
+      to: locked
+  conditions:
+    - condition: sun
+      after: sunset
+  actions:
+    - delay:
+      minutes: 2
+    - action: light.turn_off
+      target:
+        entity_id: light.front_porch

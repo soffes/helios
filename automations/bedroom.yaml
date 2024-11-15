@@ -1,9 +1,13 @@
+# Bedroom Switch: 6f533f94f53fe3f2d640a66dc307b3dc
+
 - alias: Bedroom Switch - On
   mode: single
   trigger:
-    - trigger: state
-      entity_id: light.bedroom_switch
-      to: "on"
+    - trigger: device
+      device_id: 6f533f94f53fe3f2d640a66dc307b3dc
+      domain: button
+      entity_id: event.bedroom_switch_up
+      type: pressed
   action:
     - action: scene.turn_on
       target:
@@ -11,44 +15,49 @@
 
 - alias: Bedroom Switch - Off
   trigger:
-    - trigger: state
-      entity_id: light.bedroom_switch
-      to: "off"
+    - trigger: device
+      device_id: 6f533f94f53fe3f2d640a66dc307b3dc
+      domain: button
+      entity_id: event.bedroom_switch_down
+      type: pressed
   action:
     - action: scene.turn_on
       target:
         entity_id: scene.bedroom_off
 
-# - alias: Bedroom Closet - Open
-#   mode: single
-#   trigger:
-#     - platform: state
-#       entity_id: binary_sensor.bedroom_closet_door
-#       from: "off"
-#       to: "on"
-#   action:
-#     - service: scene.turn_on
-#       target:
-#         entity_id: scene.bedroom_closet_on
+- alias: Bedroom Switch - Config
+  trigger:
+    - trigger: device
+      device_id: 6f533f94f53fe3f2d640a66dc307b3dc
+      domain: button
+      entity_id: event.bedroom_switch_config
+      type: pressed
+  action:
+    - action: cover.toggle
+      target:
+        entity_id: cover.bedroom
 
-# - alias: Bedroom Closet - Closed
-#   mode: single
-#   trigger:
-#     - platform: state
-#       entity_id: binary_sensor.bedroom_closet_door
-#       from: "on"
-#       to: "off"
-#   action:
-#     - service: scene.turn_on
-#       target:
-#         entity_id: scene.bedroom_closet_off
+- alias: Bedroom Switch - LED
+  trigger:
+    - trigger: state
+      entity_id:
+        - light.bedroom_switch_led
+      to: "on"
+  action:
+    - action: light.turn_off
+      target:
+        entity_id: light.bedroom_switch_led
+
+# Bedroom Closet Switch: 30f7b8db9805b9d02c60d822a9afc22b
 
 - alias: Bedroom Closet Switch - On
   mode: single
   trigger:
-    - trigger: state
-      entity_id: light.bedroom_closet_switch
-      to: "on"
+    - trigger: device
+      device_id: 30f7b8db9805b9d02c60d822a9afc22b
+      domain: button
+      entity_id: event.bedroom_closet_switch_up
+      type: pressed
   action:
     - action: scene.turn_on
       target:
@@ -57,8 +66,36 @@
 - alias: Bedroom Closet Switch - Off
   mode: single
   trigger:
+    - trigger: device
+      device_id: 30f7b8db9805b9d02c60d822a9afc22b
+      domain: button
+      entity_id: event.bedroom_closet_switch_down
+      type: pressed
+  action:
+    - action: scene.turn_on
+      target:
+        entity_id: scene.bedroom_closet_off
+
+# Bedroom Closet Sensor
+
+- alias: Bedroom Closet Sensor - Open
+  mode: single
+  trigger:
     - trigger: state
-      entity_id: light.bedroom_closet_switch
+      entity_id:
+      - binary_sensor.bedroom_closet_door
+      to: "on"
+  action:
+    - action: scene.turn_on
+      target:
+        entity_id: scene.bedroom_closet_on
+
+- alias: Bedroom Closet Sensor - Closed
+  mode: single
+  trigger:
+    - trigger: state
+      entity_id:
+      - binary_sensor.bedroom_closet_door
       to: "off"
   action:
     - action: scene.turn_on

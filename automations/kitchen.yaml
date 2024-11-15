@@ -1,3 +1,7 @@
+# Kitchen Switch:
+
+# Countertop Switch: 1f7038808c014ef40dbf48463037e167
+
 - alias: Kitchen Countertop - On
   mode: single
   trigger:
