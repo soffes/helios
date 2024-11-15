@@ -13,4 +13,5 @@ homekit: !include integrations/homekit.yaml
 light: !include integrations/light.yaml
 media_player: !include integrations/media_player.yaml
 scene: !include integrations/scene.yaml
+# schluter: !include integrations/schluter.yaml
 script: !include integrations/script.yaml

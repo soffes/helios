@@ -8,10 +8,12 @@
       - fan.bedroom
       - fan.living_room
       - light.vanity_switch
+      - switch.dishwasher
       - switch.space_heater
       - switch.turntable
     exclude_entities:
       - fan.airmega
+      - light.airmega
       - light.bathroom_switch
       - light.bathroom_switch_led
       - light.bedroom_closet_switch
@@ -20,6 +22,7 @@
       - light.bedroom_switch_led
       - light.countertop_switch
       - light.countertop_switch_led
+      - light.garage_door
       - light.kitchen_switch
       - light.kitchen_switch_led
       - light.living_room_switch
@@ -28,6 +31,7 @@
       - light.office_closet_switch_led
       - light.office_switch
       - light.office_switch_led
+      - light.standing_desk_status
       - light.vanity_switch_led
 
 - name: Doorbell Bridge
