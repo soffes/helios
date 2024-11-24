@@ -5,6 +5,7 @@
       - cover
       - light
     include_entities:
+      - fan.bathroom
       - fan.bedroom
       - fan.living_room
       - light.vanity_switch
@@ -13,9 +14,12 @@
       - switch.turntable
     exclude_entities:
       - fan.airmega
+      - light.3d_printer_chamber
       - light.airmega
       - light.bathroom_switch
       - light.bathroom_switch_led
+      - light.bathroom_fan_switch
+      - light.bathroom_fan_switch_led
       - light.bedroom_closet_switch
       - light.bedroom_closet_switch_led
       - light.bedroom_switch

@@ -24,8 +24,7 @@
       to: "off"
       from: "on"
   actions:
-    - delay:
-        minutes: 2
+    - delay: 00:02:00
     - action: light.turn_off
       target:
         entity_id: light.front_porch
@@ -58,8 +57,7 @@
     - condition: sun
       after: sunset
   actions:
-    - delay:
-      minutes: 2
+    - delay: 00:02:00
     - action: light.turn_off
       target:
         entity_id: light.front_porch
