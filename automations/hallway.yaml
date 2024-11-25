@@ -1,23 +1,13 @@
 - alias: Hallway Switch - On
-  trigger:
-    - platform: device
-      domain: mqtt
-      device_id: 98fec1c980f2569aa93888fd10fff0c2
-      type: action
-      subtype: release_4
-  action:
-    - service: scene.turn_on
-      target:
-        entity_id: scene.hallway_bright
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.hallway_switch_up
+      scene: scene.hallway_bright
 
 - alias: Hallway Switch - Off
-  trigger:
-    - platform: device
-      domain: mqtt
-      device_id: 98fec1c980f2569aa93888fd10fff0c2
-      type: action
-      subtype: release_3
-  action:
-    - service: scene.turn_on
-      target:
-        entity_id: scene.hallway_off
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.hallway_switch_down
+      scene: scene.hallway_off

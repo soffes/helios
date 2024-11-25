@@ -1,0 +1,25 @@
+blueprint:
+  name: Event Scene
+  description: Trigger a scene from an event
+  domain: automation
+  author: Sam Soffes
+  input:
+    event:
+      name: Event
+      selector:
+        entity:
+          filter:
+            domain: event
+    scene:
+      name: Scene
+      selector:
+        target:
+          entity:
+            domain: scene
+trigger:
+  - trigger: state
+    entity_id: !input event
+action:
+  - action: scene.turn_on
+    target:
+      entity_id: !input scene
