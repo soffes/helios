@@ -1,7 +1,6 @@
 # Bathroom Switch: 6bb5a898a3e7dd142d9b794601947f80
 
 - alias: Bathroom Switch - On
-  mode: single
   trigger:
     - trigger: device
       device_id: 6bb5a898a3e7dd142d9b794601947f80
@@ -24,3 +23,91 @@
     - action: scene.turn_on
       target:
         entity_id: scene.bathroom_off
+
+# Fan
+
+- alias: Bathroom Fan - Up
+  trigger:
+    - trigger: state
+      entity_id: event.bathroom_fan_switch_up
+  action:
+    - action: light.turn_on
+      target:
+        entity_id: light.bathroom_fan_switch_led
+      data:
+        rgb_color: [255, 255, 255]
+
+- alias: Bathroom Fan - Down
+  trigger:
+    - trigger: state
+      entity_id: event.bathroom_fan_switch_down
+  action:
+    - action: timer.cancel
+      target:
+        entity_id: timer.bathroom_fan
+    - action: light.turn_off
+      target:
+        entity_id: light.bathroom_fan_switch_led
+
+- alias: Bathroom Fan - On
+  trigger:
+    - trigger: state
+      entity_id: fan.bathroom
+      to: on
+  actions:
+    - action: timer.cancel
+      entity_id: timer.bathroom_fan
+
+- alias: Bathroom Fan - Off
+  trigger:
+    - trigger: state
+      entity: fan.bathroom
+      to: off
+    - trigger: state
+      entity_id: timer.bathroom_fan
+      to: idle
+  actions:
+    - action: light.turn_off
+      target:
+        entity_id: light.bathroom_fan_switch_led
+
+- alias: Bathroom Fan - Start Timer
+  trigger:
+    - trigger: state
+      entity_id: event.bathroom_switch_down
+  condition:
+    - condition: state
+      entity_id:
+        - fan.bathroom
+      state: "on"
+  actions:
+    - action: timer.start
+      target:
+        entity_id: timer.bathroom_fan
+
+- alias: Bathroom Fan - Timer Active
+  trigger:
+    - trigger: state
+      entity_id: timer.bathroom_fan
+      to: active
+  actions:
+    - action: light.turn_on
+      target:
+        entity_id: light.bathroom_fan_switch_led
+      data:
+        brightness: 255
+        rgb_color: [0, 255, 0]
+
+- alias: Bathroom Fan - Timer Finished
+  trigger:
+    - trigger: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.bathroom_fan
+  actions:
+    - action: fan.turn_off
+      target:
+        entity_id: fan.bathroom
+    - action: light.turn_off
+      target:
+        entity_id: light.bathroom_fan_switch_led

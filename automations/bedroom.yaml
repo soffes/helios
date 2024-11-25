@@ -25,28 +25,17 @@
       target:
         entity_id: scene.bedroom_off
 
-- alias: Bedroom Switch - Config
-  trigger:
-    - trigger: device
-      device_id: 6f533f94f53fe3f2d640a66dc307b3dc
-      domain: button
-      entity_id: event.bedroom_switch_config
-      type: pressed
-  action:
-    - action: cover.toggle
-      target:
-        entity_id: cover.bedroom
-
-- alias: Bedroom Switch - LED
-  trigger:
-    - trigger: state
-      entity_id:
-        - light.bedroom_switch_led
-      to: "on"
-  action:
-    - action: light.turn_off
-      target:
-        entity_id: light.bedroom_switch_led
+# - alias: Bedroom Switch - Config
+#   trigger:
+#     - trigger: device
+#       device_id: 6f533f94f53fe3f2d640a66dc307b3dc
+#       domain: button
+#       entity_id: event.bedroom_switch_config
+#       type: pressed
+#   action:
+#     - action: cover.toggle
+#       target:
+#         entity_id: cover.bedroom
 
 # Bedroom Closet Switch: 30f7b8db9805b9d02c60d822a9afc22b
 
