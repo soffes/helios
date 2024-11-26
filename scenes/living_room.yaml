@@ -1,17 +1,43 @@
 - name: Living Room - Bright
+  icon: mdi:lightbulb-on
   entities:
     light.living_room_table_lamp:
       state: "on"
       brightness: 255
       color_temp: 350
-    light.living_room_arc_lamp:
+    light.living_room_nw:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.living_room_nc:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.living_room_ne:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.living_room_se:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.living_room_sw:
       state: "on"
       brightness: 255
       color_temp: 350
 
 - name: Living Room - Off
+  icon: mdi:lightbulb-outline
   entities:
     light.living_room_table_lamp:
       state: "off"
-    light.living_room_arc_lamp:
+    light.living_room_nw:
+      state: "off"
+    light.living_room_nc:
+      state: "off"
+    light.living_room_ne:
+      state: "off"
+    light.living_room_se:
+      state: "off"
+    light.living_room_sw:
       state: "off"

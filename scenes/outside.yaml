@@ -1,4 +1,5 @@
 - name: Front Porch Motion
+  icon: mdi:motion-sensor
   entities:
     light.front_porch:
       state: "on"

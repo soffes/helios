@@ -1,4 +1,5 @@
 - name: Office - Bright
+  icon: mdi:lightbulb-on
   entities:
     light.office_nw:
       state: "on"
@@ -22,6 +23,7 @@
       color_temp: 350
 
 - name: Office - Off
+  icon: mdi:lightbulb-outline
   entities:
     light.office_floor_lamp:
       state: "off"
@@ -39,6 +41,7 @@
       state: "off"
 
 - name: Office Closet - Bright
+  icon: mdi:lightbulb-on
   entities:
     light.office_closet:
       state: "on"
@@ -46,6 +49,7 @@
       color_temp: 350
 
 - name: Office Closet - Off
+  icon: mdi:lightbulb-outline
   entities:
     light.office_closet:
       state: "off"

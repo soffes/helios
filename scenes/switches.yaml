@@ -1,4 +1,5 @@
 - name: Switch LEDs - Off
+  icon: mdi:led-outline
   entities:
     light.bathroom_switch_led:
       state: "off"

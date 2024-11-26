@@ -1,4 +1,5 @@
 - name: Kitchen - Bright
+  icon: mdi:lightbulb-on
   entities:
     light.kitchen_ne:
       state: "on"
@@ -26,6 +27,7 @@
       color_temp: 350
 
 - name: Kitchen - Off
+  icon: mdi:lightbulb-outline
   entities:
     light.kitchen_ne:
       state: "off"
@@ -39,8 +41,11 @@
       state: "off"
     light.kitchen_nw:
       state: "off"
+    light.countertop_lightstrip:
+      state: "off"
 
 - name: Kitchen Countertop - Bright
+  icon: mdi:lightbulb-on
   entities:
     light.countertop_lightstrip:
       state: "on"
@@ -48,6 +53,7 @@
       color_temp: 350
 
 - name: Kitchen Countertop - Off
+  icon: mdi:lightbulb-outline
   entities:
     light.countertop_lightstrip:
       state: "off"
