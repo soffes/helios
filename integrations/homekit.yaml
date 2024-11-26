@@ -44,6 +44,8 @@
       - light.living_room_overheads
       - light.office_overheads
       - light.hallway_overheads
+      - light.hallway_switch
+      - light.hallway_switch_led
 
 - name: Doorbell Bridge
   port: 21064
