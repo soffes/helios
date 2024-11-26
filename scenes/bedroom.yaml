@@ -71,7 +71,7 @@
       state: "off"
     light.front_porch:
       state: "off"
-    cover.shades:
+    cover.all_shades:
       state: "closed"
     light.studio_lamp:
       state: "off"
@@ -115,7 +115,7 @@
       state: "off"
     light.front_porch:
       state: "off"
-    cover.shades:
+    cover.all_shades:
       state: "closed"
     light.studio_lamp:
       state: "off"

@@ -46,6 +46,7 @@
       - light.hallway_overheads
       - light.hallway_switch
       - light.hallway_switch_led
+      - cover.all_shades
 
 - name: Doorbell Bridge
   port: 21064

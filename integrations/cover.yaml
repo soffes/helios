@@ -1,5 +1,5 @@
 - platform: group
-  name: Shades
+  name: All Shades
   entities:
     - cover.living_room_w
     - cover.living_room_n
