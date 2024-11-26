@@ -1,7 +1,6 @@
 # Doorbell
 
 - alias: Doorbell - Motion
-  mode: single
   triggers:
     - trigger: state
       entity_id:
@@ -16,7 +15,6 @@
         entity_id: scene.front_porch_motion
 
 - alias: Doorbell - Clear
-  mode: single
   triggers:
     - trigger: state
       entity_id:
@@ -32,7 +30,6 @@
 # Front Door
 
 - alias: Front Door - Unlocked
-  mode: single
   triggers:
     - trigger: state
       entity_id:
@@ -47,7 +44,6 @@
         entity_id: scene.front_porch_motion
 
 - alias: Front Door - Locked
-  mode: single
   triggers:
     - trigger: state
       entity_id:

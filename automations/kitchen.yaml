@@ -1,29 +1,31 @@
-# Kitchen Switch:
+# Kitchen Switch
 
-# Countertop Switch: 1f7038808c014ef40dbf48463037e167
+- alias: Kitchen Switch - On
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.kitchen_switch_up
+      scene: scene.kitchen_bright
 
-- alias: Kitchen Countertop - On
-  mode: single
-  trigger:
-    - trigger: device
-      device_id: 1f7038808c014ef40dbf48463037e167
-      domain: button
-      entity_id: event.countertop_switch_up
-      type: pressed
-  action:
-    - action: light.turn_on
-      target:
-        entity_id: light.countertop_lightstrip
+- alias: Kitchen Switch - Off
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.kitchen_switch_down
+      scene: scene.kitchen_off
 
-- alias: Kitchen Countertop - Off
-  mode: single
-  trigger:
-    - trigger: device
-      device_id: 1f7038808c014ef40dbf48463037e167
-      domain: button
-      entity_id: event.countertop_switch_down
-      type: pressed
-  action:
-    - action: light.turn_off
-      target:
-        entity_id: light.countertop_lightstrip
+# Countertop Switch
+
+- alias: Kitchen Countertop Switch - On
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.countertop_switch_up
+      scene: scene.kitchen_countertop_bright
+
+- alias: Kitchen Countertop Switch - Off
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.countertop_switch_down
+      scene: scene.kitchen_countertop_off

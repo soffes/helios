@@ -1,47 +1,31 @@
+# Office Switch
+
 - alias: Office Switch - On
-  trigger:
-    - trigger: device
-      device_id: f50a556c81af5e6423abb49f61bbe7b7
-      domain: button
-      entity_id: event.office_switch_up
-      type: pressed
-  action:
-    - action: scene.turn_on
-      target:
-        entity_id: scene.office_bright
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.office_switch_up
+      scene: scene.office_bright
 
 - alias: Office Switch - Off
-  trigger:
-    - trigger: device
-      device_id: f50a556c81af5e6423abb49f61bbe7b7
-      domain: button
-      entity_id: event.office_switch_down
-      type: pressed
-  action:
-    - action: scene.turn_on
-      target:
-        entity_id: scene.office_off
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.office_switch_down
+      scene: scene.office_off
+
+# Office Closet Switch
 
 - alias: Office Closet Switch - On
-  trigger:
-    - trigger: device
-      device_id: 75b20824c3cb3ab461ec5f60e3a591ba
-      domain: button
-      entity_id: event.office_closet_switch_up
-      type: pressed
-  action:
-    - action: scene.turn_on
-      target:
-        entity_id: scene.office_closet_bright
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.office_closet_switch_up
+      scene: scene.office_closet_bright
 
 - alias: Office Closet Switch - Off
-  trigger:
-    - trigger: device
-      device_id: 75b20824c3cb3ab461ec5f60e3a591ba
-      domain: button
-      entity_id: event.office_closet_switch_down
-      type: pressed
-  action:
-    - action: scene.turn_on
-      target:
-        entity_id: scene.office_closet_off
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.office_closet_switch_down
+      scene: scene.office_closet_off

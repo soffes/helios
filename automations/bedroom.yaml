@@ -1,69 +1,34 @@
-# Bedroom Switch: 6f533f94f53fe3f2d640a66dc307b3dc
+# Bedroom Switch
 
 - alias: Bedroom Switch - On
-  mode: single
-  trigger:
-    - trigger: device
-      device_id: 6f533f94f53fe3f2d640a66dc307b3dc
-      domain: button
-      entity_id: event.bedroom_switch_up
-      type: pressed
-  action:
-    - action: scene.turn_on
-      target:
-        entity_id: scene.bedroom_bright
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.bedroom_switch_up
+      scene: scene.bedroom_bright
 
 - alias: Bedroom Switch - Off
-  trigger:
-    - trigger: device
-      device_id: 6f533f94f53fe3f2d640a66dc307b3dc
-      domain: button
-      entity_id: event.bedroom_switch_down
-      type: pressed
-  action:
-    - action: scene.turn_on
-      target:
-        entity_id: scene.bedroom_off
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.bedroom_switch_down
+      scene: scene.bedroom_off
 
-# - alias: Bedroom Switch - Config
-#   trigger:
-#     - trigger: device
-#       device_id: 6f533f94f53fe3f2d640a66dc307b3dc
-#       domain: button
-#       entity_id: event.bedroom_switch_config
-#       type: pressed
-#   action:
-#     - action: cover.toggle
-#       target:
-#         entity_id: cover.bedroom
-
-# Bedroom Closet Switch: 30f7b8db9805b9d02c60d822a9afc22b
+# Bedroom Closet Switch
 
 - alias: Bedroom Closet Switch - On
-  mode: single
-  trigger:
-    - trigger: device
-      device_id: 30f7b8db9805b9d02c60d822a9afc22b
-      domain: button
-      entity_id: event.bedroom_closet_switch_up
-      type: pressed
-  action:
-    - action: scene.turn_on
-      target:
-        entity_id: scene.bedroom_closet_on
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.bedroom_closet_switch_up
+      scene: scene.bedroom_closet_on
 
 - alias: Bedroom Closet Switch - Off
-  mode: single
-  trigger:
-    - trigger: device
-      device_id: 30f7b8db9805b9d02c60d822a9afc22b
-      domain: button
-      entity_id: event.bedroom_closet_switch_down
-      type: pressed
-  action:
-    - action: scene.turn_on
-      target:
-        entity_id: scene.bedroom_closet_off
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.bedroom_closet_switch_up
+      scene: scene.bedroom_closet_off
 
 # Bedroom Closet Sensor
 
