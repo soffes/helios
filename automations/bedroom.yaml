@@ -11,3 +11,10 @@
     input:
       event: event.bedroom_switch_down
       scene: scene.bedroom_off
+
+- alias: Bedroom Switch - Config
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.bedroom_switch_config
+      scene: scene.bedtime
