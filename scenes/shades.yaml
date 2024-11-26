@@ -1,0 +1,33 @@
+- name: All Shades - Open
+  entities:
+    cover.living_room_w:
+      state: "open"
+    cover.living_room_n:
+      state: "open"
+    cover.living_room_s:
+      state: "open"
+    cover.kitchen_n:
+      state: "open"
+    cover.kitchen_s:
+      state: "open"
+    cover.office:
+      state: "open"
+    cover.bedroom:
+      state: "open"
+
+- name: All Shades - Closed
+  entities:
+    cover.living_room_w:
+      state: "closed"
+    cover.living_room_n:
+      state: "closed"
+    cover.living_room_s:
+      state: "closed"
+    cover.kitchen_n:
+      state: "closed"
+    cover.kitchen_s:
+      state: "closed"
+    cover.office:
+      state: "closed"
+    cover.bedroom:
+      state: "closed"

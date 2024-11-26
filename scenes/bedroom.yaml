@@ -1,0 +1,55 @@
+- name: Bedroom - Bright
+  entities:
+    light.bedroom_lamp_north:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.bedroom_lamp_south:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.bed_lightstrip_north:
+      state: "off"
+    light.bed_lightstrip_south:
+      state: "off"
+    light.bedroom_nw:
+      state: "off"
+    light.bedroom_ne:
+      state: "off"
+    light.bedroom_se:
+      state: "off"
+    light.bedroom_sw:
+      state: "off"
+
+- name: Bedroom - Off
+  entities:
+    light.bedroom_nw:
+      state: "off"
+    light.bedroom_ne:
+      state: "off"
+    light.bedroom_se:
+      state: "off"
+    light.bedroom_sw:
+      state: "off"
+    light.bedroom_lamp_north:
+      state: "off"
+    light.bedroom_lamp_south:
+      state: "off"
+    light.bed_lightstrip_north:
+      state: "off"
+    light.bed_lightstrip_south:
+      state: "off"
+    light.bedroom_closet:
+      state: "off"
+
+- name: Bedroom Closet - On
+  entities:
+    light.bedroom_closet:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+
+- name: Bedroom Closet - Off
+  entities:
+    light.bedroom_closet:
+      state: "off"

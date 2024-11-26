@@ -1,0 +1,17 @@
+- name: Living Room - Bright
+  entities:
+    light.living_room_table_lamp:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.living_room_arc_lamp:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+
+- name: Living Room - Off
+  entities:
+    light.living_room_table_lamp:
+      state: "off"
+    light.living_room_arc_lamp:
+      state: "off"

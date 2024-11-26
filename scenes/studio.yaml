@@ -1,0 +1,35 @@
+- name: Studio - Bright
+  entities:
+    light.studio_lamp:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.studio_sconce_1:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.studio_sconce_2:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.studio_sofa_lightstrip:
+      state: "on"
+      brightness: 100
+      color_temp: 350
+    light.studio_closet:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+
+- name: Studio - Off
+  entities:
+    light.studio_lamp:
+      state: "off"
+    light.studio_sconce_1:
+      state: "off"
+    light.studio_sconce_2:
+      state: "off"
+    light.studio_sofa_lightstrip:
+      state: "off"
+    light.studio_closet:
+      state: "off"

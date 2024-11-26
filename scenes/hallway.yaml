@@ -1,0 +1,35 @@
+- name: Hallway - Bright
+  entities:
+    light.entryway:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.stairs_n:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.stairs_s:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.landing_w:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.landing_e:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+
+- name: Hallway - Off
+  entities:
+    light.entryway:
+      state: "off"
+    light.stairs_n:
+      state: "off"
+    light.stairs_s:
+      state: "off"
+    light.landing_w:
+      state: "off"
+    light.landing_e:
+      state: "off"

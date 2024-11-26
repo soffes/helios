@@ -1,0 +1,22 @@
+- name: Switch LEDs - Off
+  entities:
+    light.bathroom_switch_led:
+      state: "off"
+    light.bedroom_closet_switch_led:
+      state: "off"
+    light.bedroom_switch_led:
+      state: "off"
+    light.countertop_switch_led:
+      state: "off"
+    light.hallway_switch_led:
+      state: "off"
+    light.kitchen_switch_led:
+      state: "off"
+    light.living_room_switch_led:
+      state: "off"
+    light.office_closet_switch_led:
+      state: "off"
+    light.office_switch_led:
+      state: "off"
+    light.vanity_switch_led:
+      state: "off"

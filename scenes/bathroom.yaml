@@ -1,0 +1,27 @@
+- name: Bathroom - Bright
+  entities:
+    light.bathroom_w:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.bathroom_e:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.bathroom_closet:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.vanity_switch:
+      state: "on"
+
+- name: Bathroom - Off
+  entities:
+    light.bathroom_w:
+      state: "off"
+    light.bathroom_e:
+      state: "off"
+    light.bathroom_closet:
+      state: "off"
+    light.vanity_switch:
+      state: "off"

@@ -13,6 +13,6 @@ fan: !include integrations/fan.yaml
 homekit: !include integrations/homekit.yaml
 light: !include integrations/light.yaml
 media_player: !include integrations/media_player.yaml
-scene: !include integrations/scene.yaml
+scene: !include_dir_merge_list scenes
 script: !include integrations/script.yaml
 timer: !include integrations/timer.yaml
