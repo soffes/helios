@@ -165,3 +165,103 @@
       state: "off"
     light.studio_closet:
       state: "off"
+
+- name: Goodnight
+  icon: mdi:weather-night
+  entities:
+    light.bedroom_nw:
+      state: "off"
+    light.bedroom_ne:
+      state: "off"
+    light.bedroom_se:
+      state: "off"
+    light.bedroom_sw:
+      state: "off"
+    light.bedroom_lamp_n:
+      state: "off"
+    light.bedroom_lamp_s:
+      state: "off"
+    light.bed_lightstrip_n:
+      state: "off"
+    light.bed_lightstrip_s:
+      state: "off"
+    light.bedroom_closet:
+      state: "off"
+    light.entryway:
+      state: "off"
+    light.stairs_n:
+      state: "off"
+    light.stairs_s:
+      state: "off"
+    light.landing_w:
+      state: "off"
+    light.landing_e:
+      state: "off"
+    light.kitchen_ne:
+      state: "off"
+    light.kitchen_ce:
+      state: "off"
+    light.kitchen_se:
+      state: "off"
+    light.kitchen_sw:
+      state: "off"
+    light.kitchen_cw:
+      state: "off"
+    light.kitchen_nw:
+      state: "off"
+    light.countertop_lightstrip:
+      state: "off"
+    light.living_room_table_lamp:
+      state: "off"
+    light.living_room_nw:
+      state: "off"
+    light.living_room_nc:
+      state: "off"
+    light.living_room_ne:
+      state: "off"
+    light.living_room_se:
+      state: "off"
+    light.living_room_sc:
+      state: "off"
+    light.living_room_sw:
+      state: "off"
+    light.office_floor_lamp:
+      state: "off"
+    light.office_nw:
+      state: "off"
+    light.office_ne:
+      state: "off"
+    light.office_se:
+      state: "off"
+    light.office_sw:
+      state: "off"
+    light.office_closet:
+      state: "off"
+    switch.space_heater:
+      state: "off"
+    light.front_porch:
+      state: "off"
+    cover.living_room_w:
+      state: "closed"
+    cover.living_room_n:
+      state: "closed"
+    cover.living_room_s:
+      state: "closed"
+    cover.kitchen_n:
+      state: "closed"
+    cover.kitchen_s:
+      state: "closed"
+    cover.office:
+      state: "closed"
+    cover.bedroom:
+      state: "closed"
+    light.studio_lamp:
+      state: "off"
+    light.studio_sconce_1:
+      state: "off"
+    light.studio_sconce_2:
+      state: "off"
+    light.studio_sofa_lightstrip:
+      state: "off"
+    light.studio_closet:
+      state: "off"
