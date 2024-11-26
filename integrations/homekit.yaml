@@ -37,6 +37,13 @@
       - light.office_switch_led
       - light.standing_desk_status
       - light.vanity_switch_led
+      - light.bedroom_overheads
+      - light.bedroom_lamps
+      - light.bed_lightstrips
+      - light.kitchen_overheads
+      - light.living_room_overheads
+      - light.office_overheads
+      - light.hallway_overheads
 
 - name: Doorbell Bridge
   port: 21064

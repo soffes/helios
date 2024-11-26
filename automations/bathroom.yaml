@@ -1,5 +1,3 @@
-# Bathroom Switch
-
 - alias: Bathroom Switch - On
   use_blueprint:
     path: soffes/event_scene.yaml

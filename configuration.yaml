@@ -9,6 +9,7 @@ http:
 
 alert: !include integrations/alert.yaml
 automation: !include_dir_merge_list automations
+cover: !include integrations/cover.yaml
 fan: !include integrations/fan.yaml
 homekit: !include integrations/homekit.yaml
 light: !include integrations/light.yaml

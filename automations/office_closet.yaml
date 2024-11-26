@@ -1,0 +1,13 @@
+- alias: Office Closet Switch - On
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.office_closet_switch_up
+      scene: scene.office_closet_bright
+
+- alias: Office Closet Switch - Off
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.office_closet_switch_down
+      scene: scene.office_closet_off

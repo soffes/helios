@@ -1,0 +1,10 @@
+- platform: group
+  name: Shades
+  entities:
+    - cover.living_room_w
+    - cover.living_room_n
+    - cover.living_room_s
+    - cover.kitchen_n
+    - cover.kitchen_s
+    - cover.office
+    - cover.bedroom

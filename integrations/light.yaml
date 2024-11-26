@@ -1,3 +1,60 @@
 - platform: switch
   name: Airmega
   entity_id: switch.airmega_light
+
+- platform: group
+  name: Bedroom Overheads
+  entities:
+    - light.bedroom_nw
+    - light.bedroom_ne
+    - light.bedroom_se
+    - light.bedroom_sw
+
+- platform: group
+  name: Bedroom Lamps
+  entities:
+    - light.bedroom_lamp_n
+    - light.bedroom_lamp_s
+
+- platform: group
+  name: Bed Lightstrips
+  entities:
+    - light.bed_lightstrip_n
+    - light.bed_lightstrip_s
+
+- platform: group
+  name: Kitchen Overheads
+  entities:
+    - light.kitchen_ne
+    - light.kitchen_ce
+    - light.kitchen_se
+    - light.kitchen_sw
+    - light.kitchen_cw
+    - light.kitchen_nw
+
+- platform: group
+  name: Living Room Overheads
+  entities:
+    - light.living_room_nw
+    - light.living_room_nc
+    - light.living_room_ne
+    - light.living_room_se
+    - light.living_room_sc
+    - light.living_room_sw
+
+- platform: group
+  name: Office Overheads
+  entities:
+    - light.office_nw
+    - light.office_ne
+    - light.office_se
+    - light.office_sw
+
+- platform: group
+  name: Hallway Overheads
+  entities:
+    - light.entryway
+    - light.stairs_n
+    - light.stairs_s
+    - light.landing_w
+    - light.landing_e

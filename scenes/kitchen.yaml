@@ -1,27 +1,7 @@
 - name: Kitchen - Bright
   icon: mdi:lightbulb-on
   entities:
-    light.kitchen_ne:
-      state: "on"
-      brightness: 255
-      color_temp: 350
-    light.kitchen_ce:
-      state: "on"
-      brightness: 255
-      color_temp: 350
-    light.kitchen_se:
-      state: "on"
-      brightness: 255
-      color_temp: 350
-    light.kitchen_sw:
-      state: "on"
-      brightness: 255
-      color_temp: 350
-    light.kitchen_cw:
-      state: "on"
-      brightness: 255
-      color_temp: 350
-    light.kitchen_nw:
+    light.kitchen_overheads:
       state: "on"
       brightness: 255
       color_temp: 350
@@ -29,17 +9,7 @@
 - name: Kitchen - Off
   icon: mdi:lightbulb-outline
   entities:
-    light.kitchen_ne:
-      state: "off"
-    light.kitchen_ce:
-      state: "off"
-    light.kitchen_se:
-      state: "off"
-    light.kitchen_sw:
-      state: "off"
-    light.kitchen_cw:
-      state: "off"
-    light.kitchen_nw:
+    light.kitchen_overheads:
       state: "off"
     light.countertop_lightstrip:
       state: "off"

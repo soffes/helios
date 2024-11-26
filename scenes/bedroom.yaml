@@ -1,45 +1,23 @@
 - name: Bedroom - Bright
   icon: mdi:lightbulb-on
   entities:
-    light.bedroom_lamp_n:
+    light.bedroom_lamps:
       state: "on"
       brightness: 255
       color_temp: 350
-    light.bedroom_lamp_s:
-      state: "on"
-      brightness: 255
-      color_temp: 350
-    light.bed_lightstrip_n:
+    light.bed_lightstrips:
       state: "off"
-    light.bed_lightstrip_s:
-      state: "off"
-    light.bedroom_nw:
-      state: "off"
-    light.bedroom_ne:
-      state: "off"
-    light.bedroom_se:
-      state: "off"
-    light.bedroom_sw:
+    light.bedroom_overheads:
       state: "off"
 
 - name: Bedroom - Off
   icon: mdi:lightbulb-outline
   entities:
-    light.bedroom_nw:
+    light.bedroom_overheads:
       state: "off"
-    light.bedroom_ne:
+    light.bedroom_lamps:
       state: "off"
-    light.bedroom_se:
-      state: "off"
-    light.bedroom_sw:
-      state: "off"
-    light.bedroom_lamp_n:
-      state: "off"
-    light.bedroom_lamp_s:
-      state: "off"
-    light.bed_lightstrip_n:
-      state: "off"
-    light.bed_lightstrip_s:
+    light.bed_lightstrips:
       state: "off"
     light.bedroom_closet:
       state: "off"
@@ -61,79 +39,31 @@
 - name: Bedtime
   icon: mdi:bed
   entities:
-    light.bedroom_nw:
+    light.bedroom_overheads:
       state: "off"
-    light.bedroom_ne:
-      state: "off"
-    light.bedroom_se:
-      state: "off"
-    light.bedroom_sw:
-      state: "off"
-    light.bedroom_lamp_n:
+    light.bedroom_lamps:
       state: "on"
       brightness: 50
       color_temp: 500
-    light.bedroom_lamp_s:
-      state: "on"
-      brightness: 50
-      color_temp: 500
-    light.bed_lightstrip_n:
-      state: "on"
-      brightness: 50
-      color_temp: 500
-    light.bed_lightstrip_s:
+    light.bed_lightstrips:
       state: "on"
       brightness: 50
       color_temp: 500
     light.bedroom_closet:
       state: "off"
-    light.entryway:
+    light.hallways_overheads:
       state: "off"
-    light.stairs_n:
-      state: "off"
-    light.stairs_s:
-      state: "off"
-    light.landing_w:
-      state: "off"
-    light.landing_e:
-      state: "off"
-    light.kitchen_ne:
-      state: "off"
-    light.kitchen_ce:
-      state: "off"
-    light.kitchen_se:
-      state: "off"
-    light.kitchen_sw:
-      state: "off"
-    light.kitchen_cw:
-      state: "off"
-    light.kitchen_nw:
+    light.kitchen_overheads:
       state: "off"
     light.countertop_lightstrip:
       state: "off"
     light.living_room_table_lamp:
       state: "off"
-    light.living_room_nw:
-      state: "off"
-    light.living_room_nc:
-      state: "off"
-    light.living_room_ne:
-      state: "off"
-    light.living_room_se:
-      state: "off"
-    light.living_room_sc:
-      state: "off"
-    light.living_room_sw:
+    light.living_room_overheads:
       state: "off"
     light.office_floor_lamp:
       state: "off"
-    light.office_nw:
-      state: "off"
-    light.office_ne:
-      state: "off"
-    light.office_se:
-      state: "off"
-    light.office_sw:
+    light.office_overheads:
       state: "off"
     light.office_closet:
       state: "off"
@@ -141,19 +71,7 @@
       state: "off"
     light.front_porch:
       state: "off"
-    cover.living_room_w:
-      state: "closed"
-    cover.living_room_n:
-      state: "closed"
-    cover.living_room_s:
-      state: "closed"
-    cover.kitchen_n:
-      state: "closed"
-    cover.kitchen_s:
-      state: "closed"
-    cover.office:
-      state: "closed"
-    cover.bedroom:
+    cover.shades:
       state: "closed"
     light.studio_lamp:
       state: "off"
@@ -169,71 +87,27 @@
 - name: Goodnight
   icon: mdi:weather-night
   entities:
-    light.bedroom_nw:
+    light.bedroom_overheads:
       state: "off"
-    light.bedroom_ne:
+    light.bedroom_lamps:
       state: "off"
-    light.bedroom_se:
-      state: "off"
-    light.bedroom_sw:
-      state: "off"
-    light.bedroom_lamp_n:
-      state: "off"
-    light.bedroom_lamp_s:
-      state: "off"
-    light.bed_lightstrip_n:
-      state: "off"
-    light.bed_lightstrip_s:
+    light.bed_lightstrips:
       state: "off"
     light.bedroom_closet:
       state: "off"
-    light.entryway:
+    light.hallways_overheads:
       state: "off"
-    light.stairs_n:
-      state: "off"
-    light.stairs_s:
-      state: "off"
-    light.landing_w:
-      state: "off"
-    light.landing_e:
-      state: "off"
-    light.kitchen_ne:
-      state: "off"
-    light.kitchen_ce:
-      state: "off"
-    light.kitchen_se:
-      state: "off"
-    light.kitchen_sw:
-      state: "off"
-    light.kitchen_cw:
-      state: "off"
-    light.kitchen_nw:
+    light.kitchen_overheads:
       state: "off"
     light.countertop_lightstrip:
       state: "off"
     light.living_room_table_lamp:
       state: "off"
-    light.living_room_nw:
-      state: "off"
-    light.living_room_nc:
-      state: "off"
-    light.living_room_ne:
-      state: "off"
-    light.living_room_se:
-      state: "off"
-    light.living_room_sc:
-      state: "off"
-    light.living_room_sw:
+    light.living_room_overheads:
       state: "off"
     light.office_floor_lamp:
       state: "off"
-    light.office_nw:
-      state: "off"
-    light.office_ne:
-      state: "off"
-    light.office_se:
-      state: "off"
-    light.office_sw:
+    light.office_overheads:
       state: "off"
     light.office_closet:
       state: "off"
@@ -241,19 +115,7 @@
       state: "off"
     light.front_porch:
       state: "off"
-    cover.living_room_w:
-      state: "closed"
-    cover.living_room_n:
-      state: "closed"
-    cover.living_room_s:
-      state: "closed"
-    cover.kitchen_n:
-      state: "closed"
-    cover.kitchen_s:
-      state: "closed"
-    cover.office:
-      state: "closed"
-    cover.bedroom:
+    cover.shades:
       state: "closed"
     light.studio_lamp:
       state: "off"
