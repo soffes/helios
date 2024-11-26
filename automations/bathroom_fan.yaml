@@ -25,7 +25,7 @@
   trigger:
     - trigger: state
       entity_id: fan.bathroom
-      to: on
+      to: "on"
   actions:
     - action: timer.cancel
       entity_id: timer.bathroom_fan
@@ -34,7 +34,7 @@
   trigger:
     - trigger: state
       entity: fan.bathroom
-      to: off
+      to: "off"
     - trigger: state
       entity_id: timer.bathroom_fan
       to: idle
