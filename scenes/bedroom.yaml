@@ -51,7 +51,7 @@
       color_temp: 500
     light.bedroom_closet:
       state: "off"
-    light.hallways_overheads:
+    light.hallway_overheads:
       state: "off"
     light.kitchen_overheads:
       state: "off"
@@ -95,7 +95,7 @@
       state: "off"
     light.bedroom_closet:
       state: "off"
-    light.hallways_overheads:
+    light.hallway_overheads:
       state: "off"
     light.kitchen_overheads:
       state: "off"
