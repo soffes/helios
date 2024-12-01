@@ -9,7 +9,6 @@
       - fan.bedroom
       - fan.living_room
       - light.vanity_switch
-      - switch.dishwasher
       - switch.space_heater
       - switch.turntable
     exclude_entities:

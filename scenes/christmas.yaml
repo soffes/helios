@@ -1,0 +1,11 @@
+- name: Christmas - Exterior On
+  icon: mdi:string-lights
+  entities:
+    light.christmas_exterior:
+      state: "on"
+
+- name: Christmas - Exterior Off
+  icon: mdi:string-lights-off
+  entities:
+    light.christmas_exterior:
+      state: "off"
