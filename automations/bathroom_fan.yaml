@@ -33,7 +33,7 @@
 - alias: Bathroom Fan - Off
   trigger:
     - trigger: state
-      entity: fan.bathroom
+      entity_id: fan.bathroom
       to: "off"
     - trigger: state
       entity_id: timer.bathroom_fan
