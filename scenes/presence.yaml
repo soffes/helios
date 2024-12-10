@@ -1,0 +1,7 @@
+- name: Away
+  icon: mdi:walk
+  entities:
+    climate.furnace:
+      state: "off"
+    climate.bathroom_floor:
+      state: "off"
