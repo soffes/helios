@@ -11,3 +11,13 @@
     input:
       event: event.bathroom_switch_down
       scene: scene.bathroom_off
+
+# Toggle vanity light
+- alias: Bathroom Switch - Config
+  trigger:
+    - trigger: state
+      entity_id: event.bathroom_switch_config
+  action:
+    - action: light.toggle
+      target:
+        entity_id: light.vanity_switch
