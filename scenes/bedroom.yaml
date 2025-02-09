@@ -10,6 +10,20 @@
     light.bedroom_overheads:
       state: "off"
 
+- name: Bedroom - Full
+  icon: mdi:lightbulb-on
+  entities:
+    light.bedroom_lamps:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.bed_lightstrips:
+      state: "off"
+    light.bedroom_overheads:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+
 - name: Bedroom - Off
   icon: mdi:lightbulb-outline
   entities:

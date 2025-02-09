@@ -1,9 +1,18 @@
-- alias: Bedroom Switch - On
-  use_blueprint:
-    path: soffes/event_scene.yaml
-    input:
-      event: event.bedroom_switch_up
-      scene: scene.bedroom_bright
+# Press on once to turn on bright scene. Press it again to turn on the full scene.
+- alias: Bedroom Switch - On (Bright)
+  trigger:
+    - trigger: state
+      entity_id: event.bedroom_switch_up
+  action:
+    - action: scene.turn_on
+      target:
+        entity_id: >
+          {% set brightness = state_attr("light.bedroom_lamps", "brightness") %}
+          {% if brightness and brightness == 255 %}
+            scene.bedroom_full
+          {% else %}
+            scene.bedroom_bright
+          {% endif %}
 
 - alias: Bedroom Switch - Off
   use_blueprint:

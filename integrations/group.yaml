@@ -1,0 +1,5 @@
+window_sensors:
+  name: Window Sensors
+  icon: mdi:window-closed
+  entities:
+    - cover.bathroom_skylight

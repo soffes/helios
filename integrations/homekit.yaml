@@ -65,13 +65,6 @@
     include_entities:
       - camera.doormat
 
-- name: Door Lock Bridge
-  port: 21066
-  mode: accessory
-  filter:
-    include_entities:
-      - lock.front_door
-
 - name: Garage Bridge
   port: 21067
   mode: accessory
