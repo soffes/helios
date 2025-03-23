@@ -1,0 +1,55 @@
+- name: Roxanne
+  icon: mdi:candel
+  entities:
+    light.bedroom_overheads:
+      state: "on"
+      rgb_color: [255, 0, 0]
+      brightness_pct: 50
+    light.bedroom_lamps:
+      state: "on"
+      rgb_color: [255, 0, 0]
+      brightness_pct: 50
+    light.bed_lightstrips:
+      state: "on"
+      rgb_color: [255, 0, 0]
+      brightness_pct: 50
+    light.bedroom_closet:
+      state: "off"
+    light.hallway_overheads:
+      state: "off"
+    light.kitchen_overheads:
+      state: "off"
+    light.countertop_lightstrip:
+      state: "on"
+      rgb_color: [255, 0, 0]
+      brightness_pct: 50
+    light.living_room_table_lamp:
+      state: "on"
+      rgb_color: [255, 0, 0]
+      brightness_pct: 50
+    light.living_room_overheads:
+      state: "off"
+    light.office_floor_lamp:
+      state: "off"
+    light.office_overheads:
+      state: "off"
+    light.office_closet:
+      state: "off"
+    switch.space_heater:
+      state: "off"
+    light.front_porch:
+      state: "off"
+    cover.all_shades:
+      state: "closed"
+    light.studio_lamp:
+      state: "off"
+    light.studio_sconce_1:
+      state: "off"
+    light.studio_sconce_2:
+      state: "off"
+    light.studio_sofa_lightstrip:
+      state: "off"
+    light.studio_closet:
+      state: "on"
+      rgb_color: [255, 0, 0]
+      brightness_pct: 50

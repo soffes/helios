@@ -57,11 +57,11 @@
       state: "off"
     light.bedroom_lamps:
       state: "on"
-      brightness: 50
+      brightness: 128
       color_temp: 500
     light.bed_lightstrips:
       state: "on"
-      brightness: 50
+      brightness: 128
       color_temp: 500
     light.bedroom_closet:
       state: "off"

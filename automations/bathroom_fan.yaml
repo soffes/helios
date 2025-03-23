@@ -83,3 +83,13 @@
     - action: light.turn_off
       target:
         entity_id: light.bathroom_fan_switch_led
+
+# Toggle skylight
+- alias: Bathroom Fan - Config
+  trigger:
+    - trigger: state
+      entity_id: event.bathroom_fan_switch_config
+  action:
+    - action: cover.toggle
+      target:
+        entity_id: cover.bathroom_skylight

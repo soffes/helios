@@ -9,6 +9,7 @@
       - fan.bedroom
       - fan.living_room
       - light.vanity_switch
+      - lock.back_door
       - switch.space_heater
       - switch.turntable
     exclude_entities:
