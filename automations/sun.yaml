@@ -1,17 +1,17 @@
 - alias: Sunset
   trigger:
-    - platform: sun
+    - trigger: sun
       event: sunset
       offset: "00:45:00" # 45 minutes after sunset
   action:
-    - service: scene.turn_on
+    - action: scene.turn_on
       entity_id: scene.sunset
 
 - alias: Night
   trigger:
-    - platform: time
+    - trigger: time
       at: "22:00:00"
   action:
-    - service: scene.turn_on
+    - action: scene.turn_on
       entity_id: scene.night
     

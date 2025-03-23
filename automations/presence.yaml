@@ -1,8 +1,8 @@
 - alias: Leave Home
   trigger:
-    - platform: state
+    - trigger: state
       entity_id: person.sam
       to: "not_home"
   action:
-    - service: scene.turn_on
+    - action: scene.turn_on
       entity_id: scene.away
