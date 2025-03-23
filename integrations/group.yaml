@@ -1,5 +1,6 @@
-window_sensors:
-  name: Window Sensors
-  icon: mdi:window-closed
+door_sensors:
+  name: Door Sensors
+  icon: mdi:door
   entities:
-    - cover.bathroom_skylight
+    - binary_sensor.front_door_open
+    - binary_sensor.back_door_open

@@ -1,0 +1,17 @@
+- name: Sunset
+  icon: mdi:weather-sunset
+  entities:
+    cover.all_shades:
+      state: "closed"
+    light.front_porch:
+      state: "on"
+      brightness: 128
+      color_temp: 350
+
+- name: Night
+  icon: mdi:weather-night
+  entities:
+    cover.all_shades:
+      state: "closed"
+    light.front_porch:
+      state: "off"

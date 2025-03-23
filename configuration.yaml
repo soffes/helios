@@ -14,6 +14,7 @@ cover: !include integrations/cover.yaml
 fan: !include integrations/fan.yaml
 group: !include integrations/group.yaml
 homekit: !include integrations/homekit.yaml
+input_boolean: !include integrations/input_boolean.yaml
 light: !include integrations/light.yaml
 media_player: !include integrations/media_player.yaml
 scene: !include_dir_merge_list scenes
@@ -21,3 +22,4 @@ schluter: !include integrations/schluter.yaml
 script: !include integrations/script.yaml
 sensor: !include integrations/sensor.yaml
 timer: !include integrations/timer.yaml
+zone: !include integrations/zone.yaml

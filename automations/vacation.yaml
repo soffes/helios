@@ -1,0 +1,116 @@
+# Turn on vacation mode when leaving the city
+- alias: Enable vacation mode
+  trigger:
+    - trigger: zone
+      entity_id: person.sam
+      zone: zone.san_francisco
+      event: leave
+  conditions:
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: "off"
+  action:
+    - action: input_boolean.turn_on
+      target:
+        entity_id: input_boolean.vacation_mode
+    - action: notify.notify
+      data_template:
+        title: "🌴 Vacation Mode Enabled"
+        message: "Have a nice trip 👋"
+        data:
+          push:
+            sound:
+              name: default
+          apns_headers:
+            apns-collapse-id: vacation-mode
+
+# Turn off vacation mode when entering the city
+- alias: Disable vacation mode
+  trigger:
+    - trigger: zone
+      entity_id: person.sam
+      zone: zone.san_francisco
+      event: enter
+  conditions:
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: "on"
+  action:
+    - action: input_boolean.turn_off
+      target:
+        entity_id: input_boolean.vacation_mode
+    - action: notify.notify
+      data_template:
+        title: "🏠 Vacation Mode Disabled"
+        message: "👋 Welcome home!"
+        data:
+          push:
+            sound:
+              name: default
+          apns_headers:
+            apns-collapse-id: vacation-mode
+
+# When an exterior door opens send a notification if vacation mode is on
+- alias: Vacation mode alerts
+  trigger:
+    - trigger: numeric_state
+      entity_id: sensor.open_doors_count
+      above: 0
+    - trigger: state
+      entity_id: cover.garage_door
+      to: "open"
+  conditions:
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: "on"
+  action:
+    - action: notify.notify
+      data_template:
+        title: "🚨 Security Breach"
+        message: >-
+          {% if states("sensor.open_doors_count")|int > 0 %}{{ states("sensor.open_doors_count") }} open door{% if  states("sensor.open_doors_count")|int != 1 %}s{% endif %}. {% endif %}{% if states("cover.garage_door") == "open" %}Garage door is open.{% endif %}
+        data:
+          push:
+            sound:
+              name: default
+              critical: 1
+              volume: 1.0
+          apns_headers:
+            apns-collapse-id: vacation-mode-alert
+
+- alias: Vacation - Sunrise
+  trigger:
+    - trigger: sun
+      event: sunrise
+  conditions:
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: "on"
+  action:
+    - action: scene.turn_on
+      entity_id: scene.vacation_sunrise
+
+- alias: Vacation - Sunset
+  trigger:
+    - trigger: sun
+      event: sunset
+      offset: "00:45:00" # 45 minutes after sunset
+  conditions:
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: "on"
+  action:
+    - action: scene.turn_on
+      entity_id: scene.vacation_sunset
+
+- alias: Vacation - Night
+  trigger:
+    - trigger: time
+      at: "22:00:00"
+  conditions:
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: "on"
+  action:
+    - action: scene.turn_on
+      entity_id: scene.vacation_night

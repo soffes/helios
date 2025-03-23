@@ -1,0 +1,33 @@
+- name: Vacation - Sunrise
+  icon: mdi:weather-sunset-up
+  entities:
+    cover.all_shades:
+      state: "open"
+
+- name: Vacation - Sunset
+  icon: mdi:weather-sunset
+  entities:
+    cover.all_shades:
+      state: "closed"
+    light.kitchen_ce:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.bedroom_lamp_s:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.living_room_lamp:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+
+- name: Vacation - Night
+  icon: mdi:weather-night
+  entities:
+    light.kitchen_ce:
+      state: "off"
+    light.bedroom_lamp_s:
+      state: "off"
+    light.living_room_lamp:
+      state: "off"
