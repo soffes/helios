@@ -13,7 +13,7 @@
       state: "on"
       brightness: 255
       color_temp: 350
-    light.vanity_switch:
+    light.vanity:
       state: "on"
 
 - name: Bathroom - Off
@@ -25,5 +25,5 @@
       state: "off"
     light.bathroom_closet:
       state: "off"
-    light.vanity_switch:
+    light.vanity:
       state: "off"

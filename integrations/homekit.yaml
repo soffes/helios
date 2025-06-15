@@ -8,45 +8,46 @@
       - fan.bathroom
       - fan.bedroom
       - fan.living_room
-      - light.vanity_switch
       - lock.back_door
       - switch.space_heater
       - switch.turntable
     exclude_entities:
+      - cover.all_shades
       - fan.airmega
       - light.3d_printer_chamber
       - light.airmega
-      - light.bathroom_switch
-      - light.bathroom_switch_led
       - light.bathroom_fan_switch
       - light.bathroom_fan_switch_led
+      - light.bathroom_switch
+      - light.bathroom_switch_led
+      - light.bathroom_vanity_switch_led
+      - light.bed_lightstrips
       - light.bedroom_closet_switch
       - light.bedroom_closet_switch_led
+      - light.bedroom_lamps
+      - light.bedroom_overheads
       - light.bedroom_switch
       - light.bedroom_switch_led
-      - light.countertop_switch
-      - light.countertop_switch_led
       - light.garage_door
+      - light.hallway_overheads
+      - light.hallway_switch
+      - light.hallway_switch_led
+      - light.kitchen_countertop_switch
+      - light.kitchen_countertop_switch_led
+      - light.kitchen_overheads
       - light.kitchen_switch
       - light.kitchen_switch_led
+      - light.living_room_overheads
       - light.living_room_switch
       - light.living_room_switch_led
       - light.office_closet_switch
       - light.office_closet_switch_led
+      - light.office_overheads
       - light.office_switch
       - light.office_switch_led
+      - light.oozer_x1c_chamber_light
       - light.standing_desk_status
-      - light.vanity_switch_led
-      - light.bedroom_overheads
-      - light.bedroom_lamps
-      - light.bed_lightstrips
-      - light.kitchen_overheads
-      - light.living_room_overheads
-      - light.office_overheads
-      - light.hallway_overheads
-      - light.hallway_switch
-      - light.hallway_switch_led
-      - cover.all_shades
+      - light.standing_desk_status_led
 
 - name: Doorbell Bridge
   port: 21064

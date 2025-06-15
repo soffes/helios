@@ -20,4 +20,4 @@
   action:
     - action: light.toggle
       target:
-        entity_id: light.vanity_switch
+        entity_id: light.vanity
