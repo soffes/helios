@@ -1,0 +1,7 @@
+- alias: Group Sonos speakers after TV turns off
+  trigger:
+    - trigger: state
+      entity_id: media_player.tv
+      to: "off"
+  action:
+    - action: script.sonos_group
