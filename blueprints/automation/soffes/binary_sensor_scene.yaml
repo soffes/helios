@@ -1,0 +1,54 @@
+blueprint:
+  name: Binary Sensor Scene
+  description: Trigger a scene when a binary sensor is on
+  domain: automation
+  author: Sam Soffes
+  input:
+    binary_sensor:
+      name: Binary Sensor
+      selector:
+        entity:
+          filter:
+            domain: binary_sensor
+    on_scene:
+      name: On Scene
+      selector:
+        target:
+          entity:
+            domain: scene
+    off_scene:
+      name: Off Scene
+      selector:
+        target:
+          entity:
+            domain: scene
+    off_delay:
+      name: Off Delay (Optional)
+      description: Delay before activating the off scene
+      default: 0
+      selector:
+        number:
+            min: 0
+            max: 300
+            unit_of_measurement: seconds
+            mode: slider
+trigger:
+  - trigger: state
+    entity_id: !input binary_sensor
+action:
+  - if:
+    - condition: state
+      entity_id: !input binary_sensor
+      state: "on"
+    then:
+      - action: scene.turn_on
+        target:
+          entity_id: !input on_scene
+    else:
+      # TODO: Delay doesn't work
+      # - delay: "{{ off_delay }}s"
+
+      # TODO: If the state changes again, this will probably be wrong.
+      - action: scene.turn_on
+        target:
+          entity_id: !input off_scene

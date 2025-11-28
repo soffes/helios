@@ -6,9 +6,49 @@
       value_template: "{{ states('light.bathroom_fan_switch') }}"
       turn_on:
         action: light.turn_on
-        data:
+        target:
           entity_id: light.bathroom_fan_switch
       turn_off:
         action: light.turn_off
-        data:
+        target:
           entity_id: light.bathroom_fan_switch
+
+    # You may be looking at this and think "why would you wrap a fan in a fan?" That is a good question.
+    # So for whatever reason, this fan shows up in HomeKit as an air filter and for the life of me, I
+    # can't figure out the voice command to control it. For all of my other fans, I can say "Hey Siri,
+    # turn on the fan", etc. but nothing works for this one because it's an air filter.
+    #
+    # This actually solves the problem really well. The other fans have modes, etc. too. This just has
+    # percentage and oscilation. That's great. That's all I want. So why this is silly, it solves my
+    # problem perfectly.
+    bedroom:
+      unique_id: bedroom_fan
+      friendly_name: "Bedroom Fan"
+      value_template: "{{ states('fan.bedroom_dyson') }}"
+      percentage_template: "{{ state_attr('fan.bedroom_dyson', 'percentage')  }}"
+      oscillating_template: "{{ state_attr('fan.bedroom_dyson', 'oscillating')  }}"
+      turn_on:
+        action: fan.turn_on
+        target:
+          entity_id: fan.bedroom_dyson
+      turn_off:
+        action: fan.turn_off
+        target:
+          entity_id: fan.bedroom_dyson
+      set_percentage:
+          action: fan.set_percentage
+          target:
+            entity_id: fan.bedroom_dyson
+          data:
+            percentage: "{{ percentage }}"
+
+      # This isn't working. The fan has several oscillation modes and controlling through Home
+      # Assistant doesn't appear to work. This is true for the real entity too. Probably need to
+      # fix something inside the integration before this will work.
+      set_oscillating:
+        action: fan.oscillate
+        target:
+          entity_id: fan.bedroom_dyson
+        data:
+          oscillating: "{{ oscillating }}"
+      speed_count: 10

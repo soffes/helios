@@ -1,0 +1,41 @@
+
+- alias: Hot Tub - Notify when ready
+  trigger:
+    - trigger: numeric_state
+      entity_id: sensor.hot_tub_temperature
+      above: 103
+      for:
+        minutes: 5
+  condition:
+    - condition: state
+      entity_id: input_boolean.hot_tub_warming
+      state: "on"
+  action:
+    - action: notify.notify
+      data:
+        title: 🔥 Hot tub is ready!
+        message: Currently {{ "%0.1f" | format(states("sensor.hot_tub_temperature") | float) }}°F
+        data:
+          tag: hot_tub
+    - action: input_boolean.turn_off
+      target:
+        entity_id: input_boolean.hot_tub_warming
+
+- alias: Hot Tub - Enable Warming Mode
+  trigger:
+    - trigger: state
+      entity_id: switch.hot_tub
+      to: "on"
+  action:
+    - action: input_boolean.turn_on
+      target:
+        entity_id: input_boolean.hot_tub_warming
+    - action: notify.notify
+      data:
+        title: 🛁 Hot tub is warming up!
+        message: >
+          {% set degrees_delta = 104 - (states("sensor.hot_tub_temperature") | float | round) %}
+          {% set ready = (as_timestamp(now()) + (degrees_delta * 3600)) | as_datetime | as_local %}
+          Ready {{ ready.strftime("%A at %-I:%M %p") }}
+        data:
+          tag: hot_tub

@@ -27,3 +27,35 @@
     input:
       event: event.bedroom_switch_config
       scene: scene.bedtime
+
+- alias: Bedroom Everyday Calendar - Daytime
+  trigger:
+    - trigger: state
+      entity_id: light.bedroom_lamp_s
+      to: "on"
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: "above_horizon"
+  action:
+    - action: light.turn_on
+      data:
+        entity_id: light.everyday_calendar
+
+- alias: Bedroom Everyday Calendar - Nighttime
+  trigger:
+    - trigger: state
+      entity_id: light.bedroom_lamp_s
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: "below_horizon"
+  action:
+    - action: >
+        {% if states('light.bedroom_lamp_s') == "on" %}
+          light.turn_on
+        {% else %}
+          light.turn_off
+        {% endif %}
+      data:
+        entity_id: light.everyday_calendar

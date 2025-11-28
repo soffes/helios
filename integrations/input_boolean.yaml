@@ -1,3 +1,7 @@
 vacation_mode:
   name: Vacation Mode
   icon: mdi:palm-tree
+
+hot_tub_warming:
+  name: Hot Tub Warming
+  icon: mdi:hot-tub

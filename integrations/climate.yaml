@@ -4,4 +4,4 @@
   target_sensor: sensor.hot_tub_temperature
   min_temp: 80
   target_temp: 104
-  max_temp: 105
+  max_temp: 110

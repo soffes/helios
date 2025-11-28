@@ -21,3 +21,11 @@
 #     - action: scene.turn_on
 #       target:
 #         entity_id: scene.studio_off
+
+- alias: Studio Sensor
+  use_blueprint:
+    path: soffes/binary_sensor_scene.yaml
+    input:
+      binary_sensor: binary_sensor.studio_door
+      on_scene: scene.studio_bright
+      off_scene: scene.studio_off

@@ -1,0 +1,21 @@
+- name: Laundry Door Open
+  entities:
+    light.laundry:
+      state: "on"
+
+- name: Laundry Door Closed
+  entities:
+    light.laundry:
+      state: "off"
+
+- name: Back Door Open
+  entities:
+    light.back_door:
+      state: "on"
+      brightness: 128
+      color_temp: 350
+
+- name: Back Door Closed
+  entities:
+    light.back_door:
+      state: "off"

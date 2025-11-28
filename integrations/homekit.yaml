@@ -3,17 +3,19 @@
     include_domains:
       - climate
       - cover
+      - fan
       - light
     include_entities:
-      - fan.bathroom
-      - fan.bedroom
-      - fan.living_room
       - lock.back_door
       - switch.space_heater
       - switch.turntable
     exclude_entities:
       - cover.all_shades
       - fan.airmega
+      - fan.bedroom_dyson
+      - fan.oozer_x1c_aux_fan
+      - fan.oozer_x1c_chamber_fan
+      - fan.oozer_x1c_cooling_fan
       - light.3d_printer_chamber
       - light.airmega
       - light.bathroom_fan_switch
@@ -28,6 +30,7 @@
       - light.bedroom_overheads
       - light.bedroom_switch
       - light.bedroom_switch_led
+      - light.everyday_calendar
       - light.garage_door
       - light.hallway_overheads
       - light.hallway_switch

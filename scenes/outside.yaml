@@ -5,3 +5,13 @@
       state: "on"
       brightness: 128
       color_temp: 350
+
+- name: Shed Door Open
+  entities:
+    light.shed:
+      state: "on"
+
+- name: Shed Door Closed
+  entities:
+    light.shed:
+      state: "off"

@@ -1,0 +1,16 @@
+- alias: Laundry Door Sensor
+  use_blueprint:
+    path: soffes/binary_sensor_scene.yaml
+    input:
+      binary_sensor: binary_sensor.laundry_door
+      on_scene: scene.laundry_door_open
+      off_scene: scene.laundry_door_closed
+
+- alias: Back Door Sensor
+  use_blueprint:
+    path: soffes/binary_sensor_scene.yaml
+    input:
+      binary_sensor: binary_sensor.back_door
+      on_scene: scene.back_door_open
+      off_scene: scene.back_door_closed
+      off_delay: 60 # seconds
