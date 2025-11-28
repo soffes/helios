@@ -22,3 +22,5 @@ __pycache__
 /custom_components
 
 zigbee2mqtt
+.ha_run.lock
+www/media
