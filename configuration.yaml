@@ -10,7 +10,6 @@ alert: !include integrations/alert.yaml
 automation: !include_dir_merge_list automations
 climate: !include integrations/climate.yaml
 cover: !include integrations/cover.yaml
-fan: !include integrations/fan.yaml
 group: !include integrations/group.yaml
 homekit: !include integrations/homekit.yaml
 input_boolean: !include integrations/input_boolean.yaml
@@ -19,6 +18,6 @@ media_player: !include integrations/media_player.yaml
 scene: !include_dir_merge_list scenes
 schluter: !include integrations/schluter.yaml
 script: !include_dir_merge_named scripts
-sensor: !include integrations/sensor.yaml
+template: !include integrations/template.yaml
 timer: !include integrations/timer.yaml
 zone: !include integrations/zone.yaml
