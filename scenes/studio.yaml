@@ -21,6 +21,36 @@
       state: "on"
       brightness: 255
       color_temp: 350
+    light.studio_overheads:
+      state: "off"
+
+- name: Studio - Full
+  icon: mdi:lightbulb-on
+  entities:
+    light.studio_lamp:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.studio_sconce_1:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.studio_sconce_2:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.studio_sofa_lightstrip:
+      state: "on"
+      brightness: 100
+      color_temp: 350
+    light.studio_closet:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.studio_overheads:
+      state: "on"
+      brightness: 255
+      color_temp: 350
 
 - name: Studio - Off
   icon: mdi:lightbulb-outline
@@ -34,4 +64,6 @@
     light.studio_sofa_lightstrip:
       state: "off"
     light.studio_closet:
+      state: "off"
+    light.studio_overheads:
       state: "off"

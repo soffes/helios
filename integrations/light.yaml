@@ -58,3 +58,11 @@
     - light.stairs_s
     - light.landing_w
     - light.landing_e
+
+- platform: group
+  name: Studio Overheads
+  entities:
+    - light.studio_nw
+    - light.studio_ne
+    - light.studio_se
+    - light.studio_sw

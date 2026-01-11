@@ -43,14 +43,19 @@
       - light.living_room_overheads
       - light.living_room_switch
       - light.living_room_switch_led
+      - light.office_closet_left
+      - light.office_closet_right
       - light.office_closet_switch
       - light.office_closet_switch_led
+      - light.office_closet_top
       - light.office_overheads
       - light.office_switch
       - light.office_switch_led
       - light.oozer_x1c_chamber_light
       - light.standing_desk_status
       - light.standing_desk_status_led
+      - light.studio_overheads
+      - light.studio_switch_led
 
 - name: Doorbell Bridge
   port: 21064
@@ -63,12 +68,12 @@
       support_audio: True
       linked_doorbell_sensor: binary_sensor.doorbell
 
-- name: Doormat Bridge
+- name: Package Bridge
   port: 21065
   mode: accessory
   filter:
     include_entities:
-      - camera.doormat
+      - camera.package
 
 - name: Garage Bridge
   port: 21067
@@ -76,24 +81,3 @@
   filter:
     include_entities:
       - camera.garage
-
-- name: Driveway Bridge
-  port: 21068
-  mode: accessory
-  filter:
-    include_entities:
-      - camera.driveway
-
-- name: Backyard Bridge
-  port: 21069
-  mode: accessory
-  filter:
-    include_entities:
-      - camera.backyard
-
-- name: Studio Bridge
-  port: 21070
-  mode: accessory
-  filter:
-    include_entities:
-      - camera.studio

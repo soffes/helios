@@ -13,8 +13,14 @@
       state: "on"
       brightness: 255
       color_temp: 350
-    light.vanity:
+    light.vanity_n:
       state: "on"
+      brightness: 255
+      color_temp: 350
+    light.vanity_s:
+      state: "on"
+      brightness: 255
+      color_temp: 350
 
 - name: Bathroom - Off
   icon: mdi:lightbulb-outline
@@ -25,5 +31,7 @@
       state: "off"
     light.bathroom_closet:
       state: "off"
-    light.vanity:
+    light.vanity_n:
+      state: "off"
+    light.vanity_s:
       state: "off"

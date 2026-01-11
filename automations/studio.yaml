@@ -1,31 +1,28 @@
-# - alias: Studio Switch - On
-#   trigger:
-#     - trigger: device
-#       domain: mqtt
-#       device_id: 724b60fe72d65fca7ce2a653e42afbfa
-#       type: action
-#       subtype: release_4
-#   action:
-#     - service: scene.turn_on
-#       target:
-#         entity_id: scene.studio_bright
-
-# - alias: Studio Switch - Off
-#   trigger:
-#     - trigger: device
-#       domain: mqtt
-#       device_id: 724b60fe72d65fca7ce2a653e42afbfa
-#       type: action
-#       subtype: release_3
-#   action:
-#     - action: scene.turn_on
-#       target:
-#         entity_id: scene.studio_off
-
-- alias: Studio Sensor
+- alias: Studio Switch - On
   use_blueprint:
-    path: soffes/binary_sensor_scene.yaml
+    path: soffes/event_scene.yaml
     input:
-      binary_sensor: binary_sensor.studio_door
-      on_scene: scene.studio_bright
-      off_scene: scene.studio_off
+      event: event.studio_switch_up
+      scene: scene.studio_full
+
+- alias: Studio Switch - Off
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.studio_switch_down
+      scene: scene.studio_off
+
+- alias: Studio Switch - Config
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.studio_switch_config
+      scene: scene.studio_bright
+
+# - alias: Studio Sensor
+#   use_blueprint:
+#     path: soffes/binary_sensor_scene.yaml
+#     input:
+#       binary_sensor: binary_sensor.studio_door
+#       on_scene: scene.studio_bright
+#       off_scene: scene.studio_off
