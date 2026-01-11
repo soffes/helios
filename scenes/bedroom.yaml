@@ -75,6 +75,8 @@
       state: "off"
     light.living_room_overheads:
       state: "off"
+    light.sofa_lightstrip:
+      state: "off"
     light.office_floor_lamp:
       state: "off"
     light.office_overheads:
@@ -118,6 +120,8 @@
     light.living_room_table_lamp:
       state: "off"
     light.living_room_overheads:
+      state: "off"
+    light.sofa_lightstrip:
       state: "off"
     light.office_floor_lamp:
       state: "off"

@@ -9,6 +9,8 @@
       state: "on"
       brightness: 255
       color_temp: 350
+    light.sofa_lightstrip:
+      state: "off"
 
 - name: Living Room - Off
   icon: mdi:lightbulb-outline
@@ -16,4 +18,6 @@
     light.living_room_table_lamp:
       state: "off"
     light.living_room_overheads:
+      state: "off"
+    light.sofa_lightstrip:
       state: "off"
