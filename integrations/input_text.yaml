@@ -1,0 +1,7 @@
+doordash_order_status:
+  name: Doordash Order
+  initial: inactive
+
+doordash_vendor:
+  name: Doordash Vendor
+  initial: ""

@@ -1,11 +1,20 @@
 - sensor:
-  - default_entity_id: sensor.open_doors_count
+  - name: Open Doors
+    default_entity_id: sensor.open_doors_count
     icon: "{% if expand('group.door_sensors') | selectattr('state', 'eq', 'on')
       | list | length > 0 %}mdi:door-open{% else %}mdi:door-closed{% endif
       %}"
-    name: Open Doors
     state: "{{ expand('group.door_sensors') | selectattr('state', 'eq', 'on') | list
       | length | int }}"
+  - name: Bathroom Humidity Delta
+    icon: mdi:water-percent
+    state: "{{ states('sensor.bathroom_humidity') | float - states('sensor.bedroom_humidity') | float }}"
+
+  - name: Doordash Order
+    state: "{{ states('input_text.doordash_order_status') }}"
+
+  - name: Doordash Vendor
+    state: "{{ states('input_text.doordash_vendor') }}"
 
 - fan:
   - unique_id: bathroom_fan

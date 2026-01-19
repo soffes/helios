@@ -1,0 +1,59 @@
+- id: doordash_order_placed
+  alias: "Doordash - Order Placed"
+  trigger:
+    - platform: event
+      event_type: imap_content
+      event_data:
+        sender: no-reply@doordash.com
+  condition:
+    - condition: template
+      value_template: "{{ 'Order Confirmation for' in trigger.event.data.subject }}"
+  action:
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.doordash_order_status
+      data:
+        value: "placed"
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.doordash_vendor
+      data:
+        value: >
+          {{ trigger.event.data.subject.split(' from ')[1] }}
+
+- id: doordash_order_delivered
+  alias: "Doordash - Order Delivered"
+  trigger:
+    - platform: event
+      event_type: imap_content
+      event_data:
+        sender: no-reply@doordash.com
+  condition:
+    - condition: template
+      value_template: "{{ 'Details of your no-contact delivery' in trigger.event.data.subject }}"
+  action:
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.doordash_order_status
+      data:
+        value: "delivered"
+
+- id: doordash_order_reset
+  alias: "Doordash - Reset to Inactive"
+  trigger:
+    - platform: state
+      entity_id: input_text.doordash_order_status
+      to: "delivered"
+      for:
+        minutes: 5
+  action:
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.doordash_order_status
+      data:
+        value: "inactive"
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.doordash_vendor
+      data:
+        value: ""
