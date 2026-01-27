@@ -1,0 +1,11 @@
+- name: DoorDash Order - On
+  icon: mdi:food-fork-drink
+  entities:
+    light.laundry:
+      state: "on"
+
+- name: DoorDash Order - Off
+  icon: mdi:food-fork-drink
+  entities:
+    light.laundry:
+      state: "off"

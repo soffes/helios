@@ -1,5 +1,7 @@
+# Sensor
+
 - id: doordash_order_placed
-  alias: "Doordash - Order Placed"
+  alias: "DoorDash — Order Placed"
   trigger:
     - platform: event
       event_type: imap_content
@@ -22,7 +24,7 @@
           {{ trigger.event.data.subject.split(' from ')[1] }}
 
 - id: doordash_order_delivered
-  alias: "Doordash - Order Delivered"
+  alias: "DoorDash — Order Delivered"
   trigger:
     - platform: event
       event_type: imap_content
@@ -38,8 +40,9 @@
       data:
         value: "delivered"
 
+# TODO: Maybe only do this after the front door opens
 - id: doordash_order_reset
-  alias: "Doordash - Reset to Inactive"
+  alias: "DoorDash — Reset to Inactive"
   trigger:
     - platform: state
       entity_id: input_text.doordash_order_status
@@ -57,3 +60,31 @@
         entity_id: input_text.doordash_vendor
       data:
         value: ""
+
+# Lights
+
+- alias: "DoorDash — Order After Sunset On"
+  trigger:
+    - platform: state
+      entity_id: sensor.doordash_order
+      to: "placed"
+  condition:
+    - condition: sun
+      after: sunset
+  action:
+    - action: scene.turn_on
+      target:
+        entity_id: scene.doordash_order_on
+
+- alias: "DoorDash — Order After Sunset Off"
+  trigger:
+    - platform: state
+      entity_id: sensor.doordash_order
+      to: "idle"
+  condition:
+    - condition: sun
+      after: sunset
+  action:
+    - action: scene.turn_on
+      target:
+        entity_id: scene.doordash_order_off
