@@ -1,4 +1,5 @@
-- name: Office - Bright
+- id: office_bright
+  name: Office - Bright
   icon: mdi:lightbulb-on
   entities:
     light.office_overheads:
@@ -10,7 +11,8 @@
       brightness: 255
       color_temp: 350
 
-- name: Office - Off
+- id: office_off
+  name: Office - Off
   icon: mdi:lightbulb-outline
   entities:
     light.office_floor_lamp:
@@ -22,7 +24,8 @@
     switch.space_heater:
       state: "off"
 
-- name: Office Closet - Bright
+- id: office_closet_bright
+  name: Office Closet - Bright
   icon: mdi:lightbulb-on
   entities:
     light.office_closet:
@@ -30,7 +33,8 @@
       brightness: 255
       color_temp: 350
 
-- name: Office Closet - Off
+- id: office_closet_off
+  name: Office Closet - Off
   icon: mdi:lightbulb-outline
   entities:
     light.office_closet:

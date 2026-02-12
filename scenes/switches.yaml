@@ -1,4 +1,5 @@
-- name: Switch LEDs - Off
+- id: switch_leds_off
+  name: Switch LEDs - Off
   icon: mdi:led-outline
   entities:
     light.bathroom_switch_led:

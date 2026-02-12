@@ -1,4 +1,5 @@
-- name: Roxanne
+- id: roxanne
+  name: Roxanne
   icon: mdi:candel
   entities:
     light.bedroom_overheads:

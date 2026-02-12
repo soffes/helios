@@ -1,4 +1,5 @@
-- name: Studio - Bright
+- id: studio_bright
+  name: Studio - Bright
   icon: mdi:lightbulb-on
   entities:
     light.studio_lamp:
@@ -24,7 +25,8 @@
     light.studio_overheads:
       state: "off"
 
-- name: Studio - Full
+- id: studio_full
+  name: Studio - Full
   icon: mdi:lightbulb-on
   entities:
     light.studio_lamp:
@@ -52,7 +54,8 @@
       brightness: 255
       color_temp: 350
 
-- name: Studio - Off
+- id: studio_off
+  name: Studio - Off
   icon: mdi:lightbulb-outline
   entities:
     light.studio_lamp:

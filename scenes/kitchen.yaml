@@ -1,4 +1,5 @@
-- name: Kitchen - Bright
+- id: kitchen_bright
+  name: Kitchen - Bright
   icon: mdi:lightbulb-on
   entities:
     light.kitchen_overheads:
@@ -6,7 +7,8 @@
       brightness: 255
       color_temp: 350
 
-- name: Kitchen - Off
+- id: kitchen_off
+  name: Kitchen - Off
   icon: mdi:lightbulb-outline
   entities:
     light.kitchen_overheads:
@@ -14,7 +16,8 @@
     light.countertop_lightstrip:
       state: "off"
 
-- name: Kitchen Countertop - Bright
+- id: kitchen_countertop_bright
+  name: Kitchen Countertop - Bright
   icon: mdi:lightbulb-on
   entities:
     light.countertop_lightstrip:
@@ -22,7 +25,8 @@
       brightness: 255
       color_temp: 350
 
-- name: Kitchen Countertop - Off
+- id: kitchen_countertop_off
+  name: Kitchen Countertop - Off
   icon: mdi:lightbulb-outline
   entities:
     light.countertop_lightstrip:

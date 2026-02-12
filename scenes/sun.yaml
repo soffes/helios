@@ -1,4 +1,5 @@
-- name: Sunset
+- id: sunset
+  name: Sunset
   icon: mdi:weather-sunset
   entities:
     cover.all_shades:
@@ -8,7 +9,8 @@
       brightness: 128
       color_temp: 350
 
-- name: Night
+- id: night
+  name: Night
   icon: mdi:weather-night
   entities:
     cover.all_shades:

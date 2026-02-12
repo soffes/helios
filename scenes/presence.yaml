@@ -1,4 +1,5 @@
-- name: Away
+- id: away
+  name: Away
   icon: mdi:walk
   entities:
     climate.furnace:

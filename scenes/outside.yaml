@@ -1,4 +1,5 @@
-- name: Front Porch Motion
+- id: front_porch_motion
+  name: Front Porch Motion
   icon: mdi:motion-sensor
   entities:
     light.front_porch:
@@ -6,12 +7,14 @@
       brightness: 128
       color_temp: 350
 
-- name: Shed Door Open
+- id: shed_door_open
+  name: Shed Door Open
   entities:
     light.shed:
       state: "on"
 
-- name: Shed Door Closed
+- id: shed_door_closed
+  name: Shed Door Closed
   entities:
     light.shed:
       state: "off"

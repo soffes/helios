@@ -1,4 +1,5 @@
-- name: Living Room - Bright
+- id: living_room_bright
+  name: Living Room - Bright
   icon: mdi:lightbulb-on
   entities:
     light.living_room_table_lamp:
@@ -12,7 +13,8 @@
     light.sofa_lightstrip:
       state: "off"
 
-- name: Living Room - Off
+- id: living_room_off
+  name: Living Room - Off
   icon: mdi:lightbulb-outline
   entities:
     light.living_room_table_lamp:
