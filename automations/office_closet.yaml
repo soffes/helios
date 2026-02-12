@@ -1,5 +1,6 @@
 - id: office_closet_switch_on
   alias: Office Closet Switch - On
+  mode: single
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
@@ -8,6 +9,7 @@
 
 - id: office_closet_switch_off
   alias: Office Closet Switch - Off
+  mode: single
   use_blueprint:
     path: soffes/event_scene.yaml
     input:

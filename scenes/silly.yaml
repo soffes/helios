@@ -1,6 +1,6 @@
 - id: roxanne
   name: Roxanne
-  icon: mdi:candel
+  icon: mdi:candle
   entities:
     light.bedroom_overheads:
       state: "on"

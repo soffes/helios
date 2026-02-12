@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    "*.yaml": "yaml"
+    "*.yaml": "home-assistant",
+    "esphome/*.yaml": "esphome"
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,

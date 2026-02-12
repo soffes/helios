@@ -1,5 +1,6 @@
 - id: leave_home
   alias: Leave Home
+  mode: single
   trigger:
     - trigger: state
       entity_id: person.sam

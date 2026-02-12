@@ -1,5 +1,6 @@
 - id: bathroom_switch_on
   alias: Bathroom Switch - On
+  mode: single
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
@@ -8,6 +9,7 @@
 
 - id: bathroom_switch_off
   alias: Bathroom Switch - Off
+  mode: single
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
@@ -17,6 +19,7 @@
 # Toggle vanity light
 - id: bathroom_switch_config
   alias: Bathroom Switch - Config
+  mode: single
   trigger:
     - trigger: state
       entity_id: event.bathroom_switch_config

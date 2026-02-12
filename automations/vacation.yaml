@@ -1,12 +1,13 @@
 # Turn on vacation mode when leaving the city
 - id: vacation_mode_enable
   alias: Enable vacation mode
+  mode: single
   trigger:
     - trigger: zone
       entity_id: person.sam
       zone: zone.san_francisco
       event: leave
-  conditions:
+  condition:
     - condition: state
       entity_id: input_boolean.vacation_mode
       state: "off"
@@ -15,7 +16,7 @@
       target:
         entity_id: input_boolean.vacation_mode
     - action: notify.notify
-      data_template:
+      data:
         title: "🌴 Vacation Mode Enabled"
         message: "Have a nice trip 👋"
         data:
@@ -28,12 +29,13 @@
 # Turn off vacation mode when entering the city
 - id: vacation_mode_disable
   alias: Disable vacation mode
+  mode: single
   trigger:
     - trigger: zone
       entity_id: person.sam
       zone: zone.san_francisco
       event: enter
-  conditions:
+  condition:
     - condition: state
       entity_id: input_boolean.vacation_mode
       state: "on"
@@ -42,7 +44,7 @@
       target:
         entity_id: input_boolean.vacation_mode
     - action: notify.notify
-      data_template:
+      data:
         title: "🏠 Vacation Mode Disabled"
         message: "👋 Welcome home!"
         data:
@@ -55,6 +57,7 @@
 # When an exterior door opens send a notification if vacation mode is on
 - id: vacation_mode_alerts
   alias: Vacation mode alerts
+  mode: single
   trigger:
     - trigger: numeric_state
       entity_id: sensor.open_doors_count
@@ -62,13 +65,13 @@
     - trigger: state
       entity_id: cover.garage_door
       to: "open"
-  conditions:
+  condition:
     - condition: state
       entity_id: input_boolean.vacation_mode
       state: "on"
   action:
     - action: notify.notify
-      data_template:
+      data:
         title: "🚨 Security Breach"
         message: >-
           {% if states("sensor.open_doors_count")|int > 0 %}{{ states("sensor.open_doors_count") }} open door{% if  states("sensor.open_doors_count")|int != 1 %}s{% endif %}. {% endif %}{% if states("cover.garage_door") == "open" %}Garage door is open.{% endif %}
@@ -83,10 +86,11 @@
 
 - id: vacation_sunrise
   alias: Vacation - Sunrise
+  mode: single
   trigger:
     - trigger: sun
       event: sunrise
-  conditions:
+  condition:
     - condition: state
       entity_id: input_boolean.vacation_mode
       state: "on"
@@ -96,11 +100,12 @@
 
 - id: vacation_sunset
   alias: Vacation - Sunset
+  mode: single
   trigger:
     - trigger: sun
       event: sunset
       offset: "00:45:00" # 45 minutes after sunset
-  conditions:
+  condition:
     - condition: state
       entity_id: input_boolean.vacation_mode
       state: "on"
@@ -110,10 +115,11 @@
 
 - id: vacation_night
   alias: Vacation - Night
+  mode: single
   trigger:
     - trigger: time
       at: "22:00:00"
-  conditions:
+  condition:
     - condition: state
       entity_id: input_boolean.vacation_mode
       state: "on"

@@ -1,5 +1,6 @@
 - id: living_room_switch_on
   alias: Living Room Switch - On
+  mode: single
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
@@ -8,6 +9,7 @@
 
 - id: living_room_switch_off
   alias: Living Room Switch - Off
+  mode: single
   use_blueprint:
     path: soffes/event_scene.yaml
     input:

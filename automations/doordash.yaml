@@ -2,8 +2,9 @@
 
 - id: doordash_order_placed
   alias: "DoorDash — Order Placed"
+  mode: single
   trigger:
-    - platform: event
+    - trigger: event
       event_type: imap_content
       event_data:
         sender: no-reply@doordash.com
@@ -11,12 +12,12 @@
     - condition: template
       value_template: "{{ 'Order Confirmation for' in trigger.event.data.subject }}"
   action:
-    - service: input_text.set_value
+    - action: input_text.set_value
       target:
         entity_id: input_text.doordash_order_status
       data:
         value: "placed"
-    - service: input_text.set_value
+    - action: input_text.set_value
       target:
         entity_id: input_text.doordash_vendor
       data:
@@ -25,8 +26,9 @@
 
 - id: doordash_order_delivered
   alias: "DoorDash — Order Delivered"
+  mode: single
   trigger:
-    - platform: event
+    - trigger: event
       event_type: imap_content
       event_data:
         sender: no-reply@doordash.com
@@ -34,7 +36,7 @@
     - condition: template
       value_template: "{{ 'Details of your no-contact delivery' in trigger.event.data.subject }}"
   action:
-    - service: input_text.set_value
+    - action: input_text.set_value
       target:
         entity_id: input_text.doordash_order_status
       data:
@@ -43,19 +45,20 @@
 # TODO: Maybe only do this after the front door opens
 - id: doordash_order_reset
   alias: "DoorDash — Reset to Inactive"
+  mode: single
   trigger:
-    - platform: state
+    - trigger: state
       entity_id: input_text.doordash_order_status
       to: "delivered"
       for:
         minutes: 5
   action:
-    - service: input_text.set_value
+    - action: input_text.set_value
       target:
         entity_id: input_text.doordash_order_status
       data:
         value: "inactive"
-    - service: input_text.set_value
+    - action: input_text.set_value
       target:
         entity_id: input_text.doordash_vendor
       data:
@@ -65,8 +68,9 @@
 
 - id: doordash_order_after_sunset_on
   alias: "DoorDash — Order After Sunset On"
+  mode: single
   trigger:
-    - platform: state
+    - trigger: state
       entity_id: sensor.doordash_order
       to: "placed"
   condition:
@@ -79,8 +83,9 @@
 
 - id: doordash_order_after_sunset_off
   alias: "DoorDash — Order After Sunset Off"
+  mode: single
   trigger:
-    - platform: state
+    - trigger: state
       entity_id: sensor.doordash_order
       to: "idle"
   condition:

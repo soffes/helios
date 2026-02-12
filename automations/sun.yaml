@@ -1,5 +1,6 @@
 - id: sunset
   alias: Sunset
+  mode: single
   trigger:
     - trigger: sun
       event: sunset
@@ -10,6 +11,7 @@
 
 - id: night
   alias: Night
+  mode: single
   trigger:
     - trigger: time
       at: "22:00:00"

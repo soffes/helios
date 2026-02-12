@@ -1,5 +1,6 @@
 - id: studio_switch_on
   alias: Studio Switch - On
+  mode: single
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
@@ -8,6 +9,7 @@
 
 - id: studio_switch_off
   alias: Studio Switch - Off
+  mode: single
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
@@ -16,6 +18,7 @@
 
 - id: studio_switch_config
   alias: Studio Switch - Config
+  mode: single
   use_blueprint:
     path: soffes/event_scene.yaml
     input:

@@ -1,5 +1,6 @@
 - id: bathroom_fan_up
   alias: Bathroom Fan - Up
+  mode: single
   trigger:
     - trigger: state
       entity_id: event.bathroom_fan_switch_up
@@ -12,6 +13,7 @@
 
 - id: bathroom_fan_down
   alias: Bathroom Fan - Down
+  mode: single
   trigger:
     - trigger: state
       entity_id: event.bathroom_fan_switch_down
@@ -25,16 +27,18 @@
 
 - id: bathroom_fan_on
   alias: Bathroom Fan - On
+  mode: single
   trigger:
     - trigger: state
       entity_id: fan.bathroom
       to: "on"
-  actions:
+  action:
     - action: timer.cancel
       entity_id: timer.bathroom_fan
 
 - id: bathroom_fan_off
   alias: Bathroom Fan - Off
+  mode: single
   trigger:
     - trigger: state
       entity_id: fan.bathroom
@@ -42,13 +46,14 @@
     - trigger: state
       entity_id: timer.bathroom_fan
       to: idle
-  actions:
+  action:
     - action: light.turn_off
       target:
         entity_id: light.bathroom_fan_switch_led
 
 - id: bathroom_fan_start_timer
   alias: Bathroom Fan - Start Timer
+  mode: single
   trigger:
     - trigger: state
       entity_id: event.bathroom_switch_down
@@ -57,18 +62,19 @@
       entity_id:
         - fan.bathroom
       state: "on"
-  actions:
+  action:
     - action: timer.start
       target:
         entity_id: timer.bathroom_fan
 
 - id: bathroom_fan_timer_active
   alias: Bathroom Fan - Timer Active
+  mode: single
   trigger:
     - trigger: state
       entity_id: timer.bathroom_fan
       to: active
-  actions:
+  action:
     - action: light.turn_on
       target:
         entity_id: light.bathroom_fan_switch_led
@@ -78,12 +84,13 @@
 
 - id: bathroom_fan_timer_finished
   alias: Bathroom Fan - Timer Finished
+  mode: single
   trigger:
     - trigger: event
       event_type: timer.finished
       event_data:
         entity_id: timer.bathroom_fan
-  actions:
+  action:
     - action: fan.turn_off
       target:
         entity_id: fan.bathroom
@@ -94,6 +101,7 @@
 # Toggle skylight
 - id: bathroom_fan_config
   alias: Bathroom Fan - Config
+  mode: single
   trigger:
     - trigger: state
       entity_id: event.bathroom_fan_switch_config

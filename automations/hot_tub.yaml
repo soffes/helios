@@ -1,6 +1,7 @@
 
 - id: hot_tub_notify_ready
   alias: Hot Tub - Notify when ready
+  mode: single
   trigger:
     - trigger: numeric_state
       entity_id: sensor.hot_tub_temperature
@@ -24,6 +25,7 @@
 
 - id: hot_tub_enable_warming
   alias: Hot Tub - Enable Warming Mode
+  mode: single
   trigger:
     - trigger: state
       entity_id: switch.hot_tub
