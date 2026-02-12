@@ -15,10 +15,8 @@ homekit: !include integrations/homekit.yaml
 input_boolean: !include integrations/input_boolean.yaml
 input_text: !include integrations/input_text.yaml
 light: !include integrations/light.yaml
-media_player: !include integrations/media_player.yaml
 scene: !include_dir_merge_list scenes
 schluter: !include integrations/schluter.yaml
-script: !include_dir_merge_named scripts
 template: !include integrations/template.yaml
 timer: !include integrations/timer.yaml
 zone: !include integrations/zone.yaml
