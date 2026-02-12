@@ -96,7 +96,8 @@
       state: "on"
   action:
     - action: scene.turn_on
-      entity_id: scene.vacation_sunrise
+      target:
+        entity_id: scene.vacation_sunrise
 
 - id: vacation_sunset
   alias: Vacation - Sunset
@@ -111,7 +112,8 @@
       state: "on"
   action:
     - action: scene.turn_on
-      entity_id: scene.vacation_sunset
+      target:
+        entity_id: scene.vacation_sunset
 
 - id: vacation_night
   alias: Vacation - Night
@@ -125,4 +127,5 @@
       state: "on"
   action:
     - action: scene.turn_on
-      entity_id: scene.vacation_night
+      target:
+        entity_id: scene.vacation_night

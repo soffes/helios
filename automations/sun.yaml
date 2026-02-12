@@ -7,7 +7,8 @@
       offset: "00:45:00" # 45 minutes after sunset
   action:
     - action: scene.turn_on
-      entity_id: scene.sunset
+      target:
+        entity_id: scene.sunset
 
 - id: night
   alias: Night
@@ -17,4 +18,5 @@
       at: "22:00:00"
   action:
     - action: scene.turn_on
-      entity_id: scene.night
+      target:
+        entity_id: scene.night

@@ -1,17 +1,20 @@
 - id: laundry_door_open
   name: Laundry Door Open
+  icon: mdi:door-open
   entities:
     light.laundry:
       state: "on"
 
 - id: laundry_door_closed
   name: Laundry Door Closed
+  icon: mdi:door-closed
   entities:
     light.laundry:
       state: "off"
 
 - id: back_door_open
   name: Back Door Open
+  icon: mdi:door-open
   entities:
     light.back_door:
       state: "on"
@@ -20,6 +23,7 @@
 
 - id: back_door_closed
   name: Back Door Closed
+  icon: mdi:door-closed
   entities:
     light.back_door:
       state: "off"

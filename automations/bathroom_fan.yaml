@@ -34,7 +34,8 @@
       to: "on"
   action:
     - action: timer.cancel
-      entity_id: timer.bathroom_fan
+      target:
+        entity_id: timer.bathroom_fan
 
 - id: bathroom_fan_off
   alias: Bathroom Fan - Off

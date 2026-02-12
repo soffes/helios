@@ -9,12 +9,14 @@
 
 - id: shed_door_open
   name: Shed Door Open
+  icon: mdi:door-open
   entities:
     light.shed:
       state: "on"
 
 - id: shed_door_closed
   name: Shed Door Closed
+  icon: mdi:door-closed
   entities:
     light.shed:
       state: "off"

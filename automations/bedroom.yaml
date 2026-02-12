@@ -47,7 +47,7 @@
       state: "above_horizon"
   action:
     - action: light.turn_on
-      data:
+      target:
         entity_id: light.everyday_calendar
 
 - id: bedroom_everyday_calendar_nighttime
@@ -67,5 +67,5 @@
         {% else %}
           light.turn_off
         {% endif %}
-      data:
+      target:
         entity_id: light.everyday_calendar

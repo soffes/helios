@@ -7,4 +7,5 @@
       to: "not_home"
   action:
     - action: scene.turn_on
-      entity_id: scene.away
+      target:
+        entity_id: scene.away
