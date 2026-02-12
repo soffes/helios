@@ -1,4 +1,4 @@
 bathroom_fan:
   name: Bathroom Fan Timer
-  duration: '00:05:00'
+  duration: '00:03:00'
   icon: mdi:fan-clock
