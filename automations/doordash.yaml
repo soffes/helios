@@ -63,7 +63,8 @@
 
 # Lights
 
-- alias: "DoorDash — Order After Sunset On"
+- id: doordash_order_after_sunset_on
+  alias: "DoorDash — Order After Sunset On"
   trigger:
     - platform: state
       entity_id: sensor.doordash_order
@@ -76,7 +77,8 @@
       target:
         entity_id: scene.doordash_order_on
 
-- alias: "DoorDash — Order After Sunset Off"
+- id: doordash_order_after_sunset_off
+  alias: "DoorDash — Order After Sunset Off"
   trigger:
     - platform: state
       entity_id: sensor.doordash_order

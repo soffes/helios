@@ -1,11 +1,13 @@
-- alias: Office Switch - On
+- id: office_switch_on
+  alias: Office Switch - On
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
       event: event.office_switch_up
       scene: scene.office_bright
 
-- alias: Office Switch - Off
+- id: office_switch_off
+  alias: Office Switch - Off
   use_blueprint:
     path: soffes/event_scene.yaml
     input:

@@ -1,5 +1,6 @@
 # Press on once to turn on bright scene. Press it again to turn on the full scene.
-- alias: Bedroom Switch - On (Bright)
+- id: bedroom_switch_on
+  alias: Bedroom Switch - On (Bright)
   trigger:
     - trigger: state
       entity_id: event.bedroom_switch_up
@@ -14,21 +15,24 @@
             scene.bedroom_bright
           {% endif %}
 
-- alias: Bedroom Switch - Off
+- id: bedroom_switch_off
+  alias: Bedroom Switch - Off
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
       event: event.bedroom_switch_down
       scene: scene.bedroom_off
 
-- alias: Bedroom Switch - Config
+- id: bedroom_switch_config
+  alias: Bedroom Switch - Config
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
       event: event.bedroom_switch_config
       scene: scene.bedtime
 
-- alias: Bedroom Everyday Calendar - Daytime
+- id: bedroom_everyday_calendar_daytime
+  alias: Bedroom Everyday Calendar - Daytime
   trigger:
     - trigger: state
       entity_id: light.bedroom_lamp_s
@@ -42,7 +46,8 @@
       data:
         entity_id: light.everyday_calendar
 
-- alias: Bedroom Everyday Calendar - Nighttime
+- id: bedroom_everyday_calendar_nighttime
+  alias: Bedroom Everyday Calendar - Nighttime
   trigger:
     - trigger: state
       entity_id: light.bedroom_lamp_s

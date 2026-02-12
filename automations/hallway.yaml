@@ -1,11 +1,13 @@
-- alias: Hallway Switch - On
+- id: hallway_switch_on
+  alias: Hallway Switch - On
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
       event: event.hallway_switch_up
       scene: scene.hallway_bright
 
-- alias: Hallway Switch - Off
+- id: hallway_switch_off
+  alias: Hallway Switch - Off
   use_blueprint:
     path: soffes/event_scene.yaml
     input:

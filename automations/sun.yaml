@@ -1,4 +1,5 @@
-- alias: Sunset
+- id: sunset
+  alias: Sunset
   trigger:
     - trigger: sun
       event: sunset
@@ -7,7 +8,8 @@
     - action: scene.turn_on
       entity_id: scene.sunset
 
-- alias: Night
+- id: night
+  alias: Night
   trigger:
     - trigger: time
       at: "22:00:00"

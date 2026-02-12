@@ -1,4 +1,5 @@
-- alias: Turn on exterior Christmas lights at sunset
+- id: christmas_lights_sunset_on
+  alias: Turn on exterior Christmas lights at sunset
   trigger:
     - trigger: sun
       event: sunset
@@ -6,7 +7,8 @@
     - service: scene.turn_on
       entity_id: scene.christmas_exterior_on
 
-- alias: Turn off exterior Christmas lights at night
+- id: christmas_lights_night_off
+  alias: Turn off exterior Christmas lights at night
   trigger:
     - trigger: time
       at: "23:00:00"
@@ -15,7 +17,8 @@
       entity_id: scene.christmas_exterior_off
 
 # In case I turn them after the other automation turns them off
-- alias: Turn off exterior Christmas lights at sunrise
+- id: christmas_lights_sunrise_off
+  alias: Turn off exterior Christmas lights at sunrise
   trigger:
     - trigger: sun
       event: sunrise

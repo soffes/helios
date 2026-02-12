@@ -1,4 +1,5 @@
-- alias: Laundry Door Sensor
+- id: laundry_door_sensor
+  alias: Laundry Door Sensor
   use_blueprint:
     path: soffes/binary_sensor_scene.yaml
     input:
@@ -6,7 +7,8 @@
       on_scene: scene.laundry_door_open
       off_scene: scene.laundry_door_closed
 
-- alias: Back Door Sensor
+- id: back_door_sensor
+  alias: Back Door Sensor
   use_blueprint:
     path: soffes/binary_sensor_scene.yaml
     input:

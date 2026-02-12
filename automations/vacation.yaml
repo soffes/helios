@@ -1,5 +1,6 @@
 # Turn on vacation mode when leaving the city
-- alias: Enable vacation mode
+- id: vacation_mode_enable
+  alias: Enable vacation mode
   trigger:
     - trigger: zone
       entity_id: person.sam
@@ -25,7 +26,8 @@
             apns-collapse-id: vacation-mode
 
 # Turn off vacation mode when entering the city
-- alias: Disable vacation mode
+- id: vacation_mode_disable
+  alias: Disable vacation mode
   trigger:
     - trigger: zone
       entity_id: person.sam
@@ -51,7 +53,8 @@
             apns-collapse-id: vacation-mode
 
 # When an exterior door opens send a notification if vacation mode is on
-- alias: Vacation mode alerts
+- id: vacation_mode_alerts
+  alias: Vacation mode alerts
   trigger:
     - trigger: numeric_state
       entity_id: sensor.open_doors_count
@@ -78,7 +81,8 @@
           apns_headers:
             apns-collapse-id: vacation-mode-alert
 
-- alias: Vacation - Sunrise
+- id: vacation_sunrise
+  alias: Vacation - Sunrise
   trigger:
     - trigger: sun
       event: sunrise
@@ -90,7 +94,8 @@
     - action: scene.turn_on
       entity_id: scene.vacation_sunrise
 
-- alias: Vacation - Sunset
+- id: vacation_sunset
+  alias: Vacation - Sunset
   trigger:
     - trigger: sun
       event: sunset
@@ -103,7 +108,8 @@
     - action: scene.turn_on
       entity_id: scene.vacation_sunset
 
-- alias: Vacation - Night
+- id: vacation_night
+  alias: Vacation - Night
   trigger:
     - trigger: time
       at: "22:00:00"

@@ -1,18 +1,21 @@
-- alias: Studio Switch - On
+- id: studio_switch_on
+  alias: Studio Switch - On
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
       event: event.studio_switch_up
       scene: scene.studio_full
 
-- alias: Studio Switch - Off
+- id: studio_switch_off
+  alias: Studio Switch - Off
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
       event: event.studio_switch_down
       scene: scene.studio_off
 
-- alias: Studio Switch - Config
+- id: studio_switch_config
+  alias: Studio Switch - Config
   use_blueprint:
     path: soffes/event_scene.yaml
     input:

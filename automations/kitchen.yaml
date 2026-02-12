@@ -1,13 +1,15 @@
 # Kitchen Switch
 
-- alias: Kitchen Switch - On
+- id: kitchen_switch_on
+  alias: Kitchen Switch - On
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
       event: event.kitchen_switch_up
       scene: scene.kitchen_bright
 
-- alias: Kitchen Switch - Off
+- id: kitchen_switch_off
+  alias: Kitchen Switch - Off
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
@@ -16,14 +18,16 @@
 
 # Countertop Switch
 
-- alias: Kitchen Countertop Switch - On
+- id: kitchen_countertop_switch_on
+  alias: Kitchen Countertop Switch - On
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
       event: event.countertop_switch_up
       scene: scene.kitchen_countertop_bright
 
-- alias: Kitchen Countertop Switch - Off
+- id: kitchen_countertop_switch_off
+  alias: Kitchen Countertop Switch - Off
   use_blueprint:
     path: soffes/event_scene.yaml
     input:

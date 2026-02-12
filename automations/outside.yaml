@@ -1,4 +1,5 @@
-- alias: Shed Door Sensor
+- id: shed_door_sensor
+  alias: Shed Door Sensor
   use_blueprint:
     path: soffes/binary_sensor_scene.yaml
     input:

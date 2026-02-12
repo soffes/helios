@@ -1,4 +1,5 @@
-- alias: Bathroom Fan - Up
+- id: bathroom_fan_up
+  alias: Bathroom Fan - Up
   trigger:
     - trigger: state
       entity_id: event.bathroom_fan_switch_up
@@ -9,7 +10,8 @@
       data:
         rgb_color: [255, 255, 255]
 
-- alias: Bathroom Fan - Down
+- id: bathroom_fan_down
+  alias: Bathroom Fan - Down
   trigger:
     - trigger: state
       entity_id: event.bathroom_fan_switch_down
@@ -21,7 +23,8 @@
       target:
         entity_id: light.bathroom_fan_switch_led
 
-- alias: Bathroom Fan - On
+- id: bathroom_fan_on
+  alias: Bathroom Fan - On
   trigger:
     - trigger: state
       entity_id: fan.bathroom
@@ -30,7 +33,8 @@
     - action: timer.cancel
       entity_id: timer.bathroom_fan
 
-- alias: Bathroom Fan - Off
+- id: bathroom_fan_off
+  alias: Bathroom Fan - Off
   trigger:
     - trigger: state
       entity_id: fan.bathroom
@@ -43,7 +47,8 @@
       target:
         entity_id: light.bathroom_fan_switch_led
 
-- alias: Bathroom Fan - Start Timer
+- id: bathroom_fan_start_timer
+  alias: Bathroom Fan - Start Timer
   trigger:
     - trigger: state
       entity_id: event.bathroom_switch_down
@@ -57,7 +62,8 @@
       target:
         entity_id: timer.bathroom_fan
 
-- alias: Bathroom Fan - Timer Active
+- id: bathroom_fan_timer_active
+  alias: Bathroom Fan - Timer Active
   trigger:
     - trigger: state
       entity_id: timer.bathroom_fan
@@ -70,7 +76,8 @@
         brightness: 255
         rgb_color: [0, 255, 0]
 
-- alias: Bathroom Fan - Timer Finished
+- id: bathroom_fan_timer_finished
+  alias: Bathroom Fan - Timer Finished
   trigger:
     - trigger: event
       event_type: timer.finished
@@ -85,7 +92,8 @@
         entity_id: light.bathroom_fan_switch_led
 
 # Toggle skylight
-- alias: Bathroom Fan - Config
+- id: bathroom_fan_config
+  alias: Bathroom Fan - Config
   trigger:
     - trigger: state
       entity_id: event.bathroom_fan_switch_config

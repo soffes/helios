@@ -1,13 +1,15 @@
 # Switch
 
-- alias: Bedroom Closet Switch - On
+- id: bedroom_closet_switch_on
+  alias: Bedroom Closet Switch - On
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
       event: event.bedroom_closet_switch_up
       scene: scene.bedroom_closet_on
 
-- alias: Bedroom Closet Switch - Off
+- id: bedroom_closet_switch_off
+  alias: Bedroom Closet Switch - Off
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
@@ -16,7 +18,8 @@
 
 # Door Sensor
 
-- alias: Bedroom Closet Sensor - Open
+- id: bedroom_closet_sensor_open
+  alias: Bedroom Closet Sensor - Open
   mode: single
   trigger:
     - trigger: state
@@ -28,7 +31,8 @@
       target:
         entity_id: scene.bedroom_closet_on
 
-- alias: Bedroom Closet Sensor - Closed
+- id: bedroom_closet_sensor_closed
+  alias: Bedroom Closet Sensor - Closed
   mode: single
   trigger:
     - trigger: state

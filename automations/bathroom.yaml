@@ -1,11 +1,13 @@
-- alias: Bathroom Switch - On
+- id: bathroom_switch_on
+  alias: Bathroom Switch - On
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
       event: event.bathroom_switch_up
       scene: scene.bathroom_bright
 
-- alias: Bathroom Switch - Off
+- id: bathroom_switch_off
+  alias: Bathroom Switch - Off
   use_blueprint:
     path: soffes/event_scene.yaml
     input:
@@ -13,7 +15,8 @@
       scene: scene.bathroom_off
 
 # Toggle vanity light
-- alias: Bathroom Switch - Config
+- id: bathroom_switch_config
+  alias: Bathroom Switch - Config
   trigger:
     - trigger: state
       entity_id: event.bathroom_switch_config
