@@ -5,6 +5,8 @@
       state: "on"
       brightness: 255
       color_temp: 350
+    light.bedroom_iris:
+      state: "off"
     light.bed_lightstrips:
       state: "off"
     light.bedroom_overheads:
@@ -14,6 +16,10 @@
   icon: mdi:lightbulb-on
   entities:
     light.bedroom_lamps:
+      state: "on"
+      brightness: 255
+      color_temp: 350
+    light.bedroom_iris:
       state: "on"
       brightness: 255
       color_temp: 350
@@ -30,6 +36,8 @@
     light.bedroom_overheads:
       state: "off"
     light.bedroom_lamps:
+      state: "off"
+    light.bedroom_iris:
       state: "off"
     light.bed_lightstrips:
       state: "off"
@@ -56,6 +64,10 @@
     light.bedroom_overheads:
       state: "off"
     light.bedroom_lamps:
+      state: "on"
+      brightness: 128
+      color_temp: 500
+    light.bedroom_iris:
       state: "on"
       brightness: 128
       color_temp: 500
@@ -106,6 +118,8 @@
     light.bedroom_overheads:
       state: "off"
     light.bedroom_lamps:
+      state: "off"
+    light.bedroom_iris:
       state: "off"
     light.bed_lightstrips:
       state: "off"
