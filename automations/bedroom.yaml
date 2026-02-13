@@ -5,6 +5,7 @@
   trigger:
     - trigger: state
       entity_id: event.bedroom_switch_up
+      not_from: "unavailable"
   action:
     - action: scene.turn_on
       target:

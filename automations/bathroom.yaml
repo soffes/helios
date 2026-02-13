@@ -23,6 +23,7 @@
   trigger:
     - trigger: state
       entity_id: event.bathroom_switch_config
+      not_from: "unavailable"
   action:
     - action: light.toggle
       target:

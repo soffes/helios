@@ -19,6 +19,7 @@ blueprint:
 trigger:
   - trigger: state
     entity_id: !input event
+    not_from: "unavailable"
 action:
   - action: scene.turn_on
     target:

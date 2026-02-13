@@ -4,6 +4,7 @@
   trigger:
     - trigger: state
       entity_id: event.bathroom_fan_switch_up
+      not_from: "unavailable"
   action:
     - action: light.turn_on
       target:
@@ -17,6 +18,7 @@
   trigger:
     - trigger: state
       entity_id: event.bathroom_fan_switch_down
+      not_from: "unavailable"
   action:
     - action: timer.cancel
       target:
@@ -58,6 +60,7 @@
   trigger:
     - trigger: state
       entity_id: event.bathroom_switch_down
+      not_from: "unavailable"
   condition:
     - condition: state
       entity_id:
@@ -106,6 +109,7 @@
   trigger:
     - trigger: state
       entity_id: event.bathroom_fan_switch_config
+      not_from: "unavailable"
   action:
     - action: cover.toggle
       target:
