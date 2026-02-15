@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:www.home-assistant.io)",
       "Bash(wc:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(magick:*)"
     ]
   }
 }
