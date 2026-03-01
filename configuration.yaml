@@ -18,6 +18,7 @@ input_text: !include integrations/input_text.yaml
 light: !include integrations/light.yaml
 scene: !include_dir_merge_list scenes
 schluter: !include integrations/schluter.yaml
+script: !include_dir_merge_list scripts
 template: !include integrations/template.yaml
 timer: !include integrations/timer.yaml
 zone: !include integrations/zone.yaml

@@ -16,7 +16,6 @@
       event: event.bathroom_switch_down
       scene: scene.bathroom_off
 
-# Toggle vanity light
 - id: bathroom_switch_config
   alias: Bathroom Switch - Config
   mode: single
@@ -25,6 +24,36 @@
       entity_id: event.bathroom_switch_config
       not_from: "unavailable"
   action:
-    - action: light.toggle
+    - action: scene.turn_on
       target:
-        entity_id: light.vanity
+        entity_id: scene.bathroom_vanity_dim
+
+- id: bathroom_vanity_switch_on
+  alias: Bathroom Vanity Switch - On
+  mode: single
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.bathroom_vanity_switch_up
+      scene: scene.bathroom_vanity_bright
+
+- id: bathroom_vanity_switch_off
+  alias: Bathroom Vanity Switch - Off
+  mode: single
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.bathroom_vanity_switch_down
+      scene: scene.bathroom_vanity_off
+
+- id: bathroom_vanity_switch_config
+  alias: Bathroom Vanity Switch - Config
+  mode: single
+  trigger:
+    - trigger: state
+      entity_id: event.bathroom_vanity_switch_config
+      not_from: "unavailable"
+  action:
+    - action: scene.turn_on
+      target:
+        entity_id: scene.bathroom_vanity_dim

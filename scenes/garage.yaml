@@ -1,3 +1,23 @@
+- id: garage_bright
+  name: Garage Bright
+  entities:
+    light.laundry:
+      state: "on"
+    light.garage_e:
+      state: "on"
+    light.garage_w:
+      state: "on"
+
+- id: garage_off
+  name: Garage Off
+  entities:
+    light.laundry:
+      state: "off"
+    light.garage_e:
+      state: "off"
+    light.garage_w:
+      state: "off"
+
 - id: laundry_door_open
   name: Laundry Door Open
   icon: mdi:door-open

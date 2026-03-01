@@ -1,3 +1,21 @@
+- id: garage_switch_on
+  alias: Garage Switch - On
+  mode: single
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.garage_switch_up
+      scene: scene.garage_bright
+
+- id: garage_switch_off
+  alias: Garage Switch - Off
+  mode: single
+  use_blueprint:
+    path: soffes/event_scene.yaml
+    input:
+      event: event.garage_switch_down
+      scene: scene.garage_off
+
 - id: laundry_door_sensor
   alias: Laundry Door Sensor
   mode: single
