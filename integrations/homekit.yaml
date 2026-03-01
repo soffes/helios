@@ -21,6 +21,7 @@
       - light.bathroom_fan_switch_led
       - light.bathroom_switch
       - light.bathroom_switch_led
+      - light.bathroom_vanity_switch
       - light.bathroom_vanity_switch_led
       - light.bed_lightstrips
       - light.bedroom_closet_switch
@@ -80,3 +81,31 @@
   filter:
     include_entities:
       - camera.garage
+
+- name: Backyard Bridge
+  port: 21068
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.backyard
+
+- name: Driveway Bridge
+  port: 21069
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.driveway
+
+- name: Laundry Bridge
+  port: 21070
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.laundry
+
+- name: Studio Bridge
+  port: 21071
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.studio
