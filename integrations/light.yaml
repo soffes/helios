@@ -1,7 +1,3 @@
-- platform: switch
-  name: Airmega
-  entity_id: switch.airmega_light
-
 - platform: group
   name: Bedroom Overheads
   entities:
