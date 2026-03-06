@@ -2,3 +2,7 @@ bathroom_fan:
   name: Bathroom Fan Timer
   duration: '00:03:00'
   icon: mdi:fan-clock
+
+vestaboard_todo_cooldown:
+  name: Vestaboard Todo Cooldown
+  duration: '00:00:30'

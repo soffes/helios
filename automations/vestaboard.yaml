@@ -1,0 +1,71 @@
+# Sync todo.vestaboard items to the Vestaboard display
+- id: vestaboard_todo_sync
+  alias: Vestaboard Todo Sync
+  trigger:
+    - platform: state
+      entity_id: todo.vestaboard
+    - platform: state
+      entity_id: input_boolean.vestaboard_todo_list_mode
+      to: "on"
+    - platform: time
+      at: "07:00:00"
+  condition:
+    - condition: state
+      entity_id: input_boolean.vestaboard_todo_list_mode
+      state: "on"
+  action:
+    - action: timer.start
+      target:
+        entity_id: timer.vestaboard_todo_cooldown
+    - action: todo.get_items
+      target:
+        entity_id: todo.vestaboard
+      data:
+        status:
+          - needs_action
+          - completed
+      response_variable: items
+    - choose:
+        - conditions:
+            - condition: template
+              value_template: >-
+                {{ items['todo.vestaboard']['items'] | length == 0 }}
+          sequence:
+            - action: vestaboard.message
+              data:
+                device_id: 7c44f394de8b2ba557d37a5129f2d169
+                message: "{{ now().strftime('%A %B %-d') }}"
+                justify: center
+                align: center
+      default:
+        - action: vestaboard.message
+          data:
+            device_id: 7c44f394de8b2ba557d37a5129f2d169
+            message: >-
+              {% set todos = items['todo.vestaboard']['items'] %}
+              {% set ns = namespace(lines=[]) %}
+              {% for item in todos[:6] %}
+              {% set prefix = '{69}' if item.status != 'completed' else '{66}' %}
+              {% set ns.lines = ns.lines + [prefix ~ ' ' ~ item.summary[:20]] %}
+              {% endfor %}
+              {{ ns.lines | join('\n') }}
+            justify: left
+            align: top
+
+# Turn off todo list mode if the board is changed externally
+- id: vestaboard_todo_mode_auto_off
+  alias: Vestaboard Todo Mode Auto Off
+  trigger:
+    - platform: state
+      entity_id: sensor.vestaboard_message
+  condition:
+    - condition: state
+      entity_id: input_boolean.vestaboard_todo_list_mode
+      state: "on"
+    - condition: state
+      entity_id: timer.vestaboard_todo_cooldown
+      state: idle
+  action:
+    - action: input_boolean.turn_off
+      target:
+        entity_id: input_boolean.vestaboard_todo_list_mode

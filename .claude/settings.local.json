@@ -4,7 +4,18 @@
       "WebFetch(domain:www.home-assistant.io)",
       "Bash(wc:*)",
       "WebSearch",
-      "Bash(magick:*)"
+      "Bash(magick:*)",
+      "Bash(pip list:*)",
+      "Bash(brew install:*)",
+      "Bash(hass-cli state:*)",
+      "Bash(hass-cli service:*)",
+      "Bash(curl:*)",
+      "Bash(hass-cli:*)",
+      "WebFetch(domain:docs.vestaboard.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(/tmp/ha_template.j2:*)",
+      "Bash(scp:*)"
     ]
   }
 }

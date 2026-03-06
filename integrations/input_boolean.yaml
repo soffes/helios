@@ -5,3 +5,7 @@ vacation_mode:
 hot_tub_warming:
   name: Hot Tub Warming
   icon: mdi:hot-tub
+
+vestaboard_todo_list_mode:
+  name: Vestaboard Todo List Mode
+  icon: mdi:clipboard-list
