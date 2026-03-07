@@ -6,6 +6,7 @@
       - fan
       - light
     include_entities:
+      - switch.ice_maker
       - switch.space_heater
       - switch.turntable
     exclude_entities:
@@ -49,23 +50,23 @@
       - light.studio_overheads
       - light.studio_switch_led
 
-# - name: Doorbell Bridge
-#   port: 21064
-#   mode: accessory
-#   filter:
-#     include_entities:
-#       - camera.doorbell
-#   entity_config:
-#     camera.doorbell:
-#       support_audio: True
-#       linked_doorbell_sensor: binary_sensor.doorbell
+- name: Doorbell Bridge
+  port: 21064
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.doorbell
+  entity_config:
+    camera.doorbell:
+      support_audio: True
+      linked_doorbell_sensor: binary_sensor.doorbell
 
-# - name: Package Bridge
-#   port: 21065
-#   mode: accessory
-#   filter:
-#     include_entities:
-#       - camera.package
+- name: Package Bridge
+  port: 21065
+  mode: accessory
+  filter:
+    include_entities:
+      - camera.package
 
 - name: Garage Bridge
   port: 21067
