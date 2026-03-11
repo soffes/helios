@@ -2,10 +2,15 @@
 
 ## Deploying Changes
 
-This repo lives on a dev machine, not the HA server. To deploy:
+This repo lives on a dev machine, not the HA server. Use rsync to deploy:
 
 ```
-scp -O <file> <ha-server>:/config/<path>
+rsync <file> helios.tail49df21.ts.net:/config/<path>
+```
+
+For Curiosity (van HA):
+```
+rsync <file> root@curiosity.tail49df21.ts.net:/config/<path>
 ```
 
 Then reload in HA:
@@ -15,11 +20,13 @@ hass-cli service call automation.reload
 
 Or `homeassistant.reload_all` for broader changes (input_boolean, timer, etc).
 
-SSH user matches local whoami. Use `-O` flag for SCP (legacy protocol required).
+SSH user for Helios matches local whoami. Curiosity SSH user is `root`.
 
 ## hass-cli
 
-Installed via homebrew. `HASS_SERVER` and `HASS_TOKEN` env vars are available in the shell environment automatically.
+Installed via homebrew. `HASS_SERVER` and `HASS_TOKEN` env vars point to Helios and are available in the shell automatically. Do not pass `--server` or `--token` when talking to Helios.
+
+For Curiosity, pass `--server` and `--token` explicitly. Credentials are in `credentials.yaml` (gitignored).
 
 The `raw` subcommand does not work. Use `state get/list` and `service call`.
 

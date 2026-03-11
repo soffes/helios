@@ -19,7 +19,12 @@
       "WebFetch(domain:community.home-assistant.io)",
       "Bash(source:*)",
       "WebFetch(domain:help.inovelli.com)",
-      "WebFetch(domain:community.inovelli.com)"
+      "WebFetch(domain:community.inovelli.com)",
+      "Bash(rsync:*)",
+      "Bash(brew list:*)",
+      "Bash(cloudflared access:*)",
+      "Bash(ssh:*)",
+      "Bash(ping:*)"
     ]
   }
 }

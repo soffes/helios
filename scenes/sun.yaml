@@ -17,3 +17,15 @@
       state: "closed"
     light.front_porch:
       state: "off"
+    light.bollard_nw:
+      state: "off"
+    light.bollard_nc:
+      state: "off"
+    light.bollard_ne:
+      state: "off"
+    light.bollard_sw:
+      state: "off"
+    light.bollard_se:
+      state: "off"
+    light.wall_washer:
+      state: "off"

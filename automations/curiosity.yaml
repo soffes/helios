@@ -1,0 +1,43 @@
+- id: curiosity_arrives_home
+  alias: Curiosity Arrives Home
+  mode: single
+  trigger:
+    - trigger: state
+      entity_id: person.curiosity
+      from: not_home
+      to: home
+  action:
+    - action: notify.notify
+      data:
+        title: Curiosity
+        message: The van has arrived home.
+
+- id: curiosity_arrives_home_backyard_dim
+  alias: Curiosity Arrives Home - Backyard Dim
+  mode: single
+  trigger:
+    - trigger: state
+      entity_id: person.curiosity
+      from: not_home
+      to: home
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: below_horizon
+  action:
+    - action: scene.turn_on
+      target:
+        entity_id: scene.backyard_dim
+
+- id: curiosity_leaves_home
+  alias: Curiosity Leaves Home
+  mode: single
+  trigger:
+    - trigger: state
+      entity_id: person.curiosity
+      to: not_home
+  action:
+    - action: notify.notify
+      data:
+        title: Curiosity
+        message: The van has left home.
