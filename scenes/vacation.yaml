@@ -14,15 +14,15 @@
     light.kitchen_ce:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.bedroom_lamp_s:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.living_room_lamp:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
 
 - id: vacation_night
   name: Vacation - Night

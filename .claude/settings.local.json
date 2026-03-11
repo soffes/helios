@@ -15,7 +15,11 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(/tmp/ha_template.j2:*)",
-      "Bash(scp:*)"
+      "Bash(scp:*)",
+      "WebFetch(domain:community.home-assistant.io)",
+      "Bash(source:*)",
+      "WebFetch(domain:help.inovelli.com)",
+      "WebFetch(domain:community.inovelli.com)"
     ]
   }
 }

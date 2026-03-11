@@ -5,11 +5,11 @@
     light.living_room_table_lamp:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.living_room_overheads:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.sofa_lightstrip:
       state: "off"
 

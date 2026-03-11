@@ -5,7 +5,7 @@
     light.bedroom_lamps:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.bedroom_iris:
       state: "off"
     light.bed_lightstrips:
@@ -20,17 +20,17 @@
     light.bedroom_lamps:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.bedroom_iris:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.bed_lightstrips:
       state: "off"
     light.bedroom_overheads:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
 
 - id: bedroom_off
   name: Bedroom - Off
@@ -54,7 +54,7 @@
     light.bedroom_closet:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
 
 - id: bedroom_closet_off
   name: Bedroom Closet - Off
@@ -72,15 +72,15 @@
     light.bedroom_lamps:
       state: "on"
       brightness: 128
-      color_temp: 500
+      color_temp_kelvin: 2000
     light.bedroom_iris:
       state: "on"
       brightness: 128
-      color_temp: 500
+      color_temp_kelvin: 2000
     light.bed_lightstrips:
       state: "on"
       brightness: 128
-      color_temp: 500
+      color_temp_kelvin: 2000
     light.bedroom_closet:
       state: "off"
     light.hallway_overheads:

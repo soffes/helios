@@ -1,0 +1,86 @@
+- id: chill
+  name: Chill
+  icon: mdi:sofa
+  entities:
+    light.living_room_table_lamp:
+      state: "on"
+      brightness: 120
+      color_temp_kelvin: 2200
+    light.living_room_overheads:
+      state: "off"
+    light.sofa_lightstrip:
+      state: "on"
+      brightness: 40
+      color_temp_kelvin: 2200
+    light.kitchen_ne:
+      state: "off"
+    light.kitchen_ce:
+      state: "off"
+    light.kitchen_se:
+      state: "on"
+      brightness: 100
+      color_temp_kelvin: 2200
+    light.kitchen_sw:
+      state: "on"
+      brightness: 100
+      color_temp_kelvin: 2200
+    light.kitchen_cw:
+      state: "off"
+    light.kitchen_nw:
+      state: "off"
+    light.countertop_lightstrip:
+      state: "off"
+    light.hallway_overheads:
+      state: "off"
+    light.front_porch:
+      state: "on"
+      brightness: 100
+      color_temp_kelvin: 2200
+    light.bedroom_lamps:
+      state: "off"
+    light.bedroom_iris:
+      state: "off"
+    light.bed_lightstrips:
+      state: "off"
+    light.bedroom_overheads:
+      state: "off"
+    light.bedroom_closet:
+      state: "off"
+    light.office_overheads:
+      state: "off"
+    light.office_floor_lamp:
+      state: "off"
+    light.office_closet:
+      state: "off"
+    light.studio_lamp:
+      state: "off"
+    light.studio_sconce_1:
+      state: "off"
+    light.studio_sconce_2:
+      state: "off"
+    light.studio_closet:
+      state: "off"
+    light.bathroom_w:
+      state: "off"
+    light.bathroom_e:
+      state: "off"
+    light.bathroom_closet:
+      state: "off"
+    light.vanity_n:
+      state: "off"
+    light.vanity_s:
+      state: "off"
+    cover.living_room_w:
+      state: "closed"
+    cover.living_room_n:
+      state: "closed"
+    cover.living_room_s:
+      state: "closed"
+    cover.kitchen_n:
+      state: "closed"
+    cover.kitchen_s:
+      state: "closed"
+    cover.office:
+      state: "closed"
+    cover.bedroom:
+      state: "closed"

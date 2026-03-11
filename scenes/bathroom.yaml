@@ -5,23 +5,23 @@
     light.bathroom_w:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.bathroom_e:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.bathroom_closet:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.vanity_n:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.vanity_s:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
 
 - id: bathroom_off
   name: Bathroom - Off
@@ -45,11 +45,11 @@
     light.vanity_n:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.vanity_s:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
 
 - id: bathroom_vanity_dim
   name: Bathroom Vanity - Dim
@@ -58,11 +58,11 @@
     light.vanity_n:
       state: "on"
       brightness: 75
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.vanity_s:
       state: "on"
       brightness: 75
-      color_temp: 350
+      color_temp_kelvin: 3000
 
 - id: bathroom_vanity_off
   name: Bathroom Vanity - Off

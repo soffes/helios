@@ -19,7 +19,7 @@ SSH user matches local whoami. Use `-O` flag for SCP (legacy protocol required).
 
 ## hass-cli
 
-Installed via homebrew. Requires `HASS_SERVER` and `HASS_TOKEN` env vars (sourced from `~/.zsh/homeassistant.zsh`). If not in the shell environment, pass `--server` and `--token` explicitly.
+Installed via homebrew. `HASS_SERVER` and `HASS_TOKEN` env vars are available in the shell environment automatically.
 
 The `raw` subcommand does not work. Use `state get/list` and `service call`.
 
@@ -39,3 +39,7 @@ The `raw` subcommand does not work. Use `state get/list` and `service call`.
 - VBML parameter does not work with local API, but `{number}` character codes work inline in the `message` field
 - Color codes: `{63}`=red, `{64}`=orange, `{65}`=yellow, `{66}`=green, `{67}`=blue, `{68}`=violet, `{69}`=white, `{70}`=black
 - Board: 6 rows x 22 columns
+
+## Inovelli White Series Switches
+
+- Model: VTM31-SN (2-1 Dimmer, Thread/Matter)

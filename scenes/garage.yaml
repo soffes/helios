@@ -39,7 +39,7 @@
     light.back_door:
       state: "on"
       brightness: 128
-      color_temp: 350
+      color_temp_kelvin: 3000
 
 - id: back_door_closed
   name: Back Door Closed

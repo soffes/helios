@@ -5,11 +5,11 @@
     light.office_overheads:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
     light.office_floor_lamp:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
 
 - id: office_off
   name: Office - Off
@@ -31,7 +31,7 @@
     light.office_closet:
       state: "on"
       brightness: 255
-      color_temp: 350
+      color_temp_kelvin: 3000
 
 - id: office_closet_off
   name: Office Closet - Off
