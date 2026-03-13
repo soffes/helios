@@ -14,6 +14,7 @@ cover: !include integrations/cover.yaml
 group: !include integrations/group.yaml
 homekit: !include integrations/homekit.yaml
 input_boolean: !include integrations/input_boolean.yaml
+input_select: !include integrations/input_select.yaml
 input_text: !include integrations/input_text.yaml
 light: !include integrations/light.yaml
 scene: !include_dir_merge_list scenes

@@ -1,0 +1,56 @@
+# Dishwasher
+
+- id: dishwasher_finished
+  alias: Dishwasher - Notify when finished
+  mode: single
+  trigger:
+    - trigger: state
+      entity_id: sensor.dishwasher_operation_state
+      from: run
+      to:
+        - ready
+        - finished
+  action:
+    - action: input_select.select_option
+      target:
+        entity_id: input_select.dishwasher_state
+      data:
+        option: clean
+    - action: notify.notify
+      data:
+        title: 🍽️ Dishwasher is done!
+        message: Time to unload the dishwasher.
+        data:
+          tag: dishwasher
+
+- id: dishwasher_washing
+  alias: Dishwasher - Set washing
+  mode: single
+  trigger:
+    - trigger: state
+      entity_id: sensor.dishwasher_operation_state
+      to: run
+  action:
+    - action: input_select.select_option
+      target:
+        entity_id: input_select.dishwasher_state
+      data:
+        option: washing
+
+- id: dishwasher_door_opened
+  alias: Dishwasher - Set dirty when door opens
+  mode: single
+  trigger:
+    - trigger: state
+      entity_id: sensor.dishwasher_door
+      to: open
+  condition:
+    - condition: state
+      entity_id: input_select.dishwasher_state
+      state: clean
+  action:
+    - action: input_select.select_option
+      target:
+        entity_id: input_select.dishwasher_state
+      data:
+        option: dirty

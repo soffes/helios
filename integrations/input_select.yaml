@@ -1,0 +1,7 @@
+dishwasher_state:
+  name: Dishwasher State
+  options:
+    - dirty
+    - washing
+    - clean
+  initial: dirty
