@@ -1,0 +1,15 @@
+- id: ha_update_available
+  alias: HA Update Available
+  mode: single
+  trigger:
+    - trigger: state
+      entity_id:
+        - update.home_assistant_core_update
+        - update.home_assistant_supervisor_update
+        - update.home_assistant_operating_system_update
+      to: "on"
+  action:
+    - action: notify.notify
+      data:
+        title: Home Assistant Update
+        message: "{{ trigger.to_state.attributes.friendly_name | replace('Home Assistant ', '') }}: {{ trigger.to_state.attributes.latest_version }}"
